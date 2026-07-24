@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Collective Horizon. A family office for American residential real assets.</title>
+<meta name="description" content="Collective Horizon is a Miami based family office acquiring single-family and multifamily properties across high-yield American markets, underwritten from day one to institutional exit criteria.">
+<!-- PLACEHOLDER DOMAIN: replace collectivehorizon.com everywhere once the final domain is confirmed -->
+<link rel="canonical" href="https://collectivehorizon.com/">
+<link rel="alternate" hreflang="en" href="https://collectivehorizon.com/">
+<link rel="alternate" hreflang="fr" href="https://collectivehorizon.com/?lang=fr">
+<link rel="alternate" hreflang="x-default" href="https://collectivehorizon.com/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Collective Horizon">
+<meta property="og:description" content="A family office for American residential real assets. Miami, Florida.">
+<meta property="og:url" content="https://collectivehorizon.com/">
+<meta property="og:image" content="https://collectivehorizon.com/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f1512">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Collective Horizon",
+  "url": "https://collectivehorizon.com/",
+  "logo": "https://collectivehorizon.com/assets/favicon.svg",
+  "description": "A private family office acquiring single-family and multifamily properties across high-yield American markets, underwritten from day one to institutional exit criteria.",
+  "address": {"@type": "PostalAddress", "addressLocality": "Miami", "addressRegion": "FL", "addressCountry": "US"},
+  "founder": {
+    "@type": "Person",
+    "name": "David Hazout Levy",
+    "jobTitle": "Founder",
+    "alumniOf": {"@type": "CollegeOrUniversity", "name": "HEC Paris"},
+    "knowsLanguage": ["en", "fr", "es", "ar"]
+  }
+}
+</script>
+<style>
+:root{
+  --ink:#0f1512;
+  --ink-2:#131a16;
+  --ink-3:#182019;
+  --line:rgba(176,141,87,.22);
+  --line-soft:rgba(240,233,220,.09);
+  --brass:#b08d57;
+  --brass-hi:#d3b184;
+  --cream:#f0e9dc;
+  --cream-dim:rgba(240,233,220,.72);
+  --cream-faint:rgba(240,233,220,.5);
+  --serif-d:"Fraunces",Georgia,serif;
+  --serif-b:"Newsreader",Georgia,serif;
+  --sans:"Libre Franklin",system-ui,sans-serif;
+  --fs-hero:clamp(2.4rem,7.2vw,6.2rem);
+  --fs-h2:clamp(1.9rem,4.4vw,3.6rem);
+  --fs-h3:clamp(1.3rem,2.4vw,1.9rem);
+  --fs-body:clamp(1.02rem,1.35vw,1.2rem);
+  --fs-small:clamp(.78rem,.95vw,.86rem);
+  --pad:clamp(1.25rem,4vw,4rem);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:auto}
+body{
+  background:var(--ink);
+  color:var(--cream);
+  font-family:var(--serif-b);
+  font-size:var(--fs-body);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+/* Never overflow-x on html or body. Full-bleed sections clip themselves. */
+section{overflow:hidden}
+img,video,canvas{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+::selection{background:rgba(176,141,87,.35)}
+
+.kicker{
+  font-family:var(--sans);
+  font-size:var(--fs-small);
+  font-weight:500;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:var(--brass);
+}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.6,.2,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* ---------- Preloader with CSS dead-man switch ---------- */
+#preloader{
+  position:fixed;inset:0;z-index:120;
+  background:var(--ink);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4rem;
+  animation:deadman .7s ease 6s forwards;
+}
+@keyframes deadman{to{opacity:0;visibility:hidden}}
+body.ready #preloader{opacity:0;visibility:hidden;transition:opacity .7s ease,visibility 0s linear .7s}
+#preloader .mono{width:64px;height:64px}
+#preloader .bar{width:120px;height:1px;background:var(--line-soft);position:relative;overflow:hidden}
+#preloader .bar i{position:absolute;inset-block:0;inset-inline-start:0;width:40%;background:var(--brass);animation:load 1.2s ease-in-out infinite alternate}
+@keyframes load{from{transform:translateX(-60%)}to{transform:translateX(260%)}}
+#preloader p{font-family:var(--sans);font-size:.7rem;letter-spacing:.42em;text-transform:uppercase;color:var(--cream-faint)}
+
+/* ---------- Header ---------- */
+header{
+  position:fixed;top:0;inset-inline:0;z-index:90;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem var(--pad);
+  transition:background .5s ease,border-color .5s ease;
+  border-bottom:1px solid transparent;
+}
+header.solid{background:rgba(15,21,18,.86);backdrop-filter:blur(12px);border-bottom-color:var(--line-soft)}
+.brand{display:flex;align-items:center;gap:.7rem}
+.brand svg{width:34px;height:34px;flex:none}
+.brand b{font-family:var(--serif-d);font-weight:500;font-size:.95rem;letter-spacing:.24em}
+.hdr-right{display:flex;align-items:center;gap:1rem}
+.lang-tog{display:flex;gap:.15rem;font-family:var(--sans);font-size:.72rem;letter-spacing:.12em}
+.lang-tog button{padding:.35rem .45rem;color:var(--cream-faint);border-radius:2px}
+.lang-tog button[aria-pressed="true"]{color:var(--brass-hi)}
+.lang-tog span{color:var(--cream-faint);align-self:center}
+#soundBtn{position:relative;width:38px;height:38px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;color:var(--cream-dim)}
+#soundBtn svg{width:15px;height:15px}
+#soundBtn .off-line{display:none}
+#soundBtn.muted .off-line{display:block}
+#soundBtn.pulse::after{
+  content:"";position:absolute;inset:-1px;border-radius:50%;
+  border:1px solid var(--brass);animation:pulse 2s ease-out infinite;
+}
+@keyframes pulse{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.75);opacity:0}}
+.cta{
+  font-family:var(--sans);font-size:.74rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink);background:var(--brass);
+  padding:.85rem 1.35rem;border-radius:2px;
+  transition:background .3s ease,transform .3s ease;
+  text-align:center;
+}
+.cta:hover{background:var(--brass-hi)}
+.cta.ghost{background:transparent;color:var(--brass-hi);border:1px solid var(--line)}
+.cta.ghost:hover{border-color:var(--brass)}
+
+/* ---------- Hero scrub ---------- */
+#hero{height:420vh;position:relative}
+.hero-sticky{position:sticky;top:0;height:100vh;height:100dvh;overflow:hidden;display:flex;align-items:center;justify-content:center}
+#scrub{position:absolute;inset:0;width:100%;height:100%}
+.hero-veil{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 62%,transparent 30%,rgba(15,21,18,.72) 100%)}
+.hero-content{position:relative;z-index:2;text-align:center;padding:0 var(--pad);max-width:1100px}
+.hero-content .kicker{margin-bottom:1.6rem}
+h1.display{
+  font-family:var(--serif-d);font-weight:300;font-size:var(--fs-hero);
+  letter-spacing:.14em;line-height:1.08;text-transform:uppercase;
+  direction:ltr;unicode-bidi:isolate;
+}
+h1.display .word{display:inline-block;white-space:nowrap;direction:ltr;unicode-bidi:isolate}
+h1.display .sp{display:inline-block;width:.5em}
+h1.display .ch{
+  display:inline-block;direction:ltr;unicode-bidi:isolate;
+  opacity:0;transform:translateY(.55em);
+  transition:opacity .9s ease,transform 1.1s cubic-bezier(.16,.66,.2,1);
+}
+body.ready h1.display .ch{opacity:1;transform:translateY(0)}
+.hero-sub{
+  margin-top:1.7rem;font-size:clamp(1.05rem,1.7vw,1.35rem);font-weight:300;font-style:italic;
+  color:var(--cream-dim);opacity:0;transition:opacity 1.4s ease 1.2s;
+}
+body.ready .hero-sub{opacity:1}
+.hero-cue{
+  position:absolute;bottom:2.2rem;inset-inline:0;z-index:2;
+  display:flex;flex-direction:column;align-items:center;gap:.7rem;
+  font-family:var(--sans);font-size:.66rem;letter-spacing:.4em;text-transform:uppercase;color:var(--cream-faint);
+  opacity:0;transition:opacity 1.2s ease 2s;
+}
+body.ready .hero-cue{opacity:1}
+.hero-cue .cue-line{width:1px;height:44px;background:linear-gradient(var(--brass),transparent);animation:cue 2.2s ease-in-out infinite}
+@keyframes cue{0%,100%{transform:scaleY(.4);transform-origin:top;opacity:.4}50%{transform:scaleY(1);opacity:1}}
+
+/* ---------- Intro statement ---------- */
+.intro{position:relative;min-height:118vh;display:flex;align-items:center;justify-content:center}
+.bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tint{position:absolute;inset:0;background:linear-gradient(rgba(15,21,18,.86),rgba(15,21,18,.62) 45%,var(--ink))}
+.intro-inner{position:relative;z-index:2;max-width:900px;padding:6rem var(--pad);text-align:center}
+.intro-inner .kicker{margin-bottom:2rem}
+.intro-inner p.statement{
+  font-family:var(--serif-d);font-weight:300;
+  font-size:clamp(1.4rem,2.8vw,2.3rem);line-height:1.5;
+}
+.intro-inner p.statement em{color:var(--brass-hi);font-style:normal}
+
+/* ---------- Counters ---------- */
+.counters{padding:9rem var(--pad) 7rem;border-top:1px solid var(--line-soft)}
+.counters .head{max-width:1200px;margin:0 auto 4.5rem}
+.counters h2{font-family:var(--serif-d);font-weight:300;font-size:var(--fs-h2);margin-top:1.1rem}
+.count-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:2.5rem 2rem}
+.counter{border-top:1px solid var(--line);padding-top:1.4rem}
+.counter b{
+  display:block;font-family:var(--serif-d);font-weight:300;
+  font-size:clamp(2.1rem,3.6vw,3.2rem);color:var(--brass-hi);
+  font-variant-numeric:tabular-nums;line-height:1.1;
+}
+.counter span{display:block;margin-top:.5rem;font-family:var(--sans);font-size:.8rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-dim)}
+.counter small{display:block;margin-top:.65rem;font-size:.78rem;font-style:italic;color:var(--cream-faint);line-height:1.5}
+.counters .legal-note{max-width:1200px;margin:3.5rem auto 0;font-size:.82rem;font-style:italic;color:var(--cream-faint)}
+
+/* ---------- Strategy pinned sections ---------- */
+.strat-head{padding:8rem var(--pad) 4rem;max-width:1200px;margin:0 auto}
+.strat-head h2{font-family:var(--serif-d);font-weight:300;font-size:var(--fs-h2);margin-top:1.1rem}
+.strategy{display:grid;grid-template-columns:1.08fr 1fr;min-height:172vh;position:relative}
+.strat-media{position:sticky;top:0;height:100vh;height:100dvh;overflow:hidden;background:var(--ink-2)}
+.strat-media video,.strat-media img{width:100%;height:100%;object-fit:cover}
+.strat-media .media-tint{position:absolute;inset:0;background:linear-gradient(100deg,rgba(15,21,18,.28),rgba(15,21,18,.62));pointer-events:none}
+.strategy.rev .strat-media{order:2}
+.strategy.rev .media-tint{background:linear-gradient(260deg,rgba(15,21,18,.28),rgba(15,21,18,.62))}
+.strat-copy{display:flex;flex-direction:column;justify-content:center;gap:1.5rem;padding:24vh var(--pad)}
+.strat-copy .num{font-family:var(--serif-d);font-size:1rem;color:var(--brass);letter-spacing:.3em}
+.strat-copy h3{font-family:var(--serif-d);font-weight:400;font-size:clamp(1.9rem,3.4vw,3rem);line-height:1.15}
+.strat-copy p{max-width:34em;color:var(--cream-dim);font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.75}
+.strat-copy .note{font-size:.8rem;font-style:italic;color:var(--cream-faint);max-width:34em}
+
+/* ---------- How it works ---------- */
+.how{padding:9rem var(--pad);border-top:1px solid var(--line-soft)}
+.how .head{max-width:1200px;margin:0 auto 4.5rem}
+.how h2{font-family:var(--serif-d);font-weight:300;font-size:var(--fs-h2);margin-top:1.1rem}
+.steps{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:3rem 2.5rem}
+.step{border-top:1px solid var(--line);padding-top:1.6rem}
+.step .n{font-family:var(--serif-d);font-size:2.4rem;font-weight:300;color:var(--brass);font-variant-numeric:tabular-nums}
+.step h3{font-family:var(--serif-d);font-weight:400;font-size:var(--fs-h3);margin:.9rem 0 .8rem}
+.step p{color:var(--cream-dim);line-height:1.75;font-size:1.02rem}
+
+/* ---------- Principal ---------- */
+.principal{padding:9rem var(--pad);border-top:1px solid var(--line-soft);background:var(--ink-2)}
+.principal .inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.5fr;gap:4rem}
+.principal .side{display:flex;flex-direction:column;gap:1.5rem}
+.principal .side .mono-lg{width:96px;height:96px;opacity:.9}
+.principal h2{font-family:var(--serif-d);font-weight:400;font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.2}
+.principal .langs{font-family:var(--sans);font-size:.78rem;letter-spacing:.3em;color:var(--brass);text-transform:uppercase}
+.principal .bio p{color:var(--cream-dim);line-height:1.85;margin-bottom:1.4rem;font-size:clamp(1.05rem,1.5vw,1.22rem)}
+.principal .bio p:last-child{margin-bottom:0}
+
+/* ---------- FAQ ---------- */
+.faq{padding:9rem var(--pad)}
+.faq .head{max-width:900px;margin:0 auto 3.5rem}
+.faq h2{font-family:var(--serif-d);font-weight:300;font-size:var(--fs-h2);margin-top:1.1rem}
+.faq-list{max-width:900px;margin:0 auto}
+.faq-list details{border-top:1px solid var(--line-soft)}
+.faq-list details:last-child{border-bottom:1px solid var(--line-soft)}
+.faq-list summary{
+  cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:2rem;
+  padding:1.6rem .2rem;font-family:var(--serif-d);font-weight:400;font-size:clamp(1.05rem,1.8vw,1.35rem);
+}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary .mark{flex:none;color:var(--brass);font-size:1.3rem;transition:transform .35s ease;line-height:1}
+.faq-list details[open] summary .mark{transform:rotate(45deg)}
+.faq-list .a{padding:0 .2rem 1.8rem;color:var(--cream-dim);line-height:1.8;max-width:44em}
+
+/* ---------- Final CTA ---------- */
+.finale{padding:11rem var(--pad);text-align:center;position:relative;border-top:1px solid var(--line-soft)}
+.finale h2{font-family:var(--serif-d);font-weight:300;font-size:clamp(2rem,5vw,4rem);margin-bottom:1.4rem}
+.finale p{color:var(--cream-dim);margin-bottom:2.6rem;font-style:italic}
+.finale .row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* ---------- Footer ---------- */
+footer{border-top:1px solid var(--line-soft);padding:4.5rem var(--pad) 3rem;background:var(--ink-2)}
+.foot-inner{max-width:1200px;margin:0 auto}
+.foot-top{display:flex;justify-content:space-between;gap:3rem;flex-wrap:wrap;margin-bottom:3rem}
+.foot-brand{display:flex;align-items:center;gap:.8rem}
+.foot-brand svg{width:40px;height:40px}
+.foot-brand b{font-family:var(--serif-d);font-weight:500;letter-spacing:.24em;font-size:.95rem}
+.foot-meta{font-family:var(--sans);font-size:.78rem;color:var(--cream-faint);display:flex;flex-direction:column;gap:.45rem;text-align:end}
+.foot-meta a:hover{color:var(--brass-hi)}
+.disclaimer{font-size:.82rem;line-height:1.8;color:var(--cream-faint);font-style:italic;max-width:76em;margin-bottom:2.2rem}
+.foot-bottom{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;font-family:var(--sans);font-size:.72rem;letter-spacing:.08em;color:var(--cream-faint)}
+.foot-bottom .links{display:flex;gap:1.6rem}
+.foot-bottom a:hover{color:var(--brass-hi)}
+
+/* ---------- Drawer dialog ---------- */
+dialog.drawer{
+  position:fixed;inset-block:0;inset-inline-end:0;inset-inline-start:auto;
+  block-size:100vh;block-size:100dvh;max-block-size:100vh;max-block-size:100dvh;
+  inline-size:min(460px,94vw);max-inline-size:94vw;
+  margin:0;margin-inline-start:auto;
+  border:none;border-inline-start:1px solid var(--line);
+  background:var(--ink-2);color:var(--cream);
+  padding:0;overflow-y:auto;
+}
+dialog.drawer[open]{animation:slidein .5s cubic-bezier(.2,.7,.2,1)}
+@keyframes slidein{from{transform:translateX(6%);opacity:0}to{transform:translateX(0);opacity:1}}
+dialog.drawer::backdrop{background:rgba(8,12,10,.62);backdrop-filter:blur(3px)}
+.drawer-inner{padding:2.6rem 2.2rem 3rem;display:flex;flex-direction:column;gap:1.5rem;min-block-size:100%}
+.drawer-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+.drawer-head h2{font-family:var(--serif-d);font-weight:400;font-size:1.5rem;line-height:1.3;max-width:12em}
+#drawerClose{width:38px;height:38px;flex:none;display:grid;place-items:center;border:1px solid var(--line-soft);border-radius:50%;color:var(--cream-dim);font-size:1.1rem}
+#drawerClose:hover{border-color:var(--brass)}
+.drawer-sub{font-style:italic;color:var(--cream-faint);font-size:.92rem}
+.field{display:flex;flex-direction:column;gap:.45rem}
+.field label{font-family:var(--sans);font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--cream-dim)}
+.field input,.field select{
+  font:inherit;font-size:1rem;color:var(--cream);
+  background:var(--ink);border:1px solid var(--line-soft);border-radius:2px;
+  padding:.85rem .9rem;outline:none;width:100%;
+}
+.field input:focus,.field select:focus{border-color:var(--brass)}
+.field [aria-invalid="true"]{border-color:#b05757}
+.check{display:flex;gap:.8rem;align-items:flex-start;font-size:.88rem;line-height:1.6;color:var(--cream-dim)}
+.check input{margin-top:.3rem;accent-color:var(--brass);width:16px;height:16px;flex:none}
+.check.invalid{color:#c98080}
+.form-note{font-size:.78rem;font-style:italic;color:var(--cream-faint)}
+.form-error{display:none;color:#c98080;font-size:.88rem}
+.form-error.show{display:block}
+.form-success{display:none;font-family:var(--serif-d);font-size:1.15rem;color:var(--brass-hi);line-height:1.6}
+.form-success.show{display:block}
+.drawer-cal{display:none;text-align:center;font-size:.9rem}
+.drawer-cal.on{display:block}
+.drawer-cal a{color:var(--brass-hi);border-bottom:1px solid var(--line)}
+
+/* ---------- Mobile bottom bar ---------- */
+#mobileBar{
+  display:none;position:fixed;bottom:0;inset-inline:0;z-index:80;
+  background:rgba(15,21,18,.94);backdrop-filter:blur(12px);
+  border-top:1px solid var(--line-soft);
+  padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));
+  grid-template-columns:auto auto 1fr;gap:.6rem;align-items:stretch;
+}
+#mobileBar .mini{
+  display:grid;place-items:center;padding:.65rem .9rem;
+  border:1px solid var(--line);border-radius:2px;
+  font-family:var(--sans);font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-dim);
+}
+#mobileBar .cta{font-size:.62rem;letter-spacing:.1em;padding:.65rem .5rem;display:grid;place-items:center}
+
+/* ---------- Responsive ---------- */
+@media (max-width:960px){
+  .strategy{grid-template-columns:1fr;min-height:0}
+  .strat-media{position:relative;height:54vh;order:0!important}
+  .strat-copy{padding:3.5rem var(--pad) 5rem}
+  .principal .inner{grid-template-columns:1fr;gap:2.5rem}
+  .foot-meta{text-align:start}
+}
+@media (max-width:719.98px){
+  header .cta{display:none}
+  #mobileBar{display:grid}
+  body{padding-bottom:64px}
+  footer{padding-bottom:6rem}
+}
+@media (max-height:520px){
+  #hero{height:340vh}
+  h1.display{font-size:clamp(1.6rem,6vh,2.6rem)}
+  .hero-sub{margin-top:.9rem;font-size:.95rem}
+  .hero-cue{display:none}
+  .hero-content .kicker{margin-bottom:.8rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .reveal{transition:none;opacity:1;transform:none}
+  h1.display .ch{transition:opacity .3s ease}
+  .hero-cue .cue-line{animation:none}
+}
+</style>
+</head>
+<body>
+
+<div id="preloader" aria-hidden="true">
+  <svg class="mono" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+    <rect x="2" y="2" width="60" height="60" rx="6" stroke="#b08d57" stroke-width="1.2"/>
+    <rect x="6.5" y="6.5" width="51" height="51" rx="3.5" stroke="#b08d57" stroke-width=".6" opacity=".55"/>
+    <text x="32" y="41" text-anchor="middle" font-family="Georgia,serif" font-size="24" letter-spacing="1" fill="#f0e9dc">CH</text>
+  </svg>
+  <div class="bar"><i></i></div>
+  <p>Collective Horizon</p>
+</div>
+
+<header id="hdr">
+  <a class="brand" href="#hero" aria-label="Collective Horizon, back to top">
+    <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+      <rect x="2" y="2" width="60" height="60" rx="6" stroke="#b08d57" stroke-width="1.6"/>
+      <rect x="6.5" y="6.5" width="51" height="51" rx="3.5" stroke="#b08d57" stroke-width=".7" opacity=".55"/>
+      <text x="32" y="41" text-anchor="middle" font-family="Georgia,serif" font-size="24" letter-spacing="1" fill="#f0e9dc">CH</text>
+    </svg>
+    <b>COLLECTIVE&nbsp;HORIZON</b>
+  </a>
+  <div class="hdr-right">
+    <nav class="lang-tog" aria-label="Language">
+      <button id="langEn" aria-pressed="true">EN</button><span>/</span><button id="langFr" aria-pressed="false">FR</button>
+    </nav>
+    <button id="soundBtn" class="muted pulse" data-i18n-aria="sound.aria" aria-label="Toggle ambient sound" aria-pressed="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M11 5 6 9H2v6h4l5 4V5z"/>
+        <path class="on-wave" d="M15.5 8.5a5 5 0 0 1 0 7"/>
+        <line class="off-line" x1="16" y1="9" x2="21" y2="15"/>
+        <line class="off-line" x1="21" y1="9" x2="16" y2="15"/>
+      </svg>
+    </button>
+    <button class="cta js-open-drawer" data-i18n="cta.main">Request the Investor Presentation</button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO: scroll-scrub canvas -->
+  <section id="hero" aria-label="Collective Horizon">
+    <div class="hero-sticky">
+      <canvas id="scrub" aria-hidden="true"></canvas>
+      <div class="hero-veil" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="kicker" data-i18n="hero.kicker">A private family office, Miami</p>
+        <h1 class="display" id="heroTitle" aria-label="Collective Horizon"></h1>
+        <p class="hero-sub" data-i18n="hero.sub">A family office for American residential real assets.</p>
+      </div>
+      <div class="hero-cue" aria-hidden="true"><span data-i18n="hero.cue">Scroll</span><span class="cue-line"></span></div>
+    </div>
+  </section>
+
+  <!-- INTRO statement over street clip -->
+  <section class="intro" id="intro">
+    <video class="bg-video" muted loop playsinline autoplay preload="metadata" poster="assets/posters/street.webp" aria-hidden="true">
+      <source src="assets/clips/street.mp4" type="video/mp4">
+    </video>
+    <div class="tint" aria-hidden="true"></div>
+    <div class="intro-inner reveal">
+      <p class="kicker" data-i18n="intro.kicker">The firm</p>
+      <p class="statement" data-i18n="intro.line">We acquire single-family and multifamily properties across high-yield American markets. Every asset is underwritten from day one to the buy-box criteria of institutional acquirers.</p>
+    </div>
+  </section>
+
+  <!-- CREDIBILITY counters. PLACEHOLDER FIGURES: replace [XX] values once real figures are provided. -->
+  <section class="counters" id="record">
+    <div class="head reveal">
+      <p class="kicker" data-i18n="rec.kicker">The record</p>
+      <h2 data-i18n="rec.title">Discipline, in figures</h2>
+    </div>
+    <div class="count-grid">
+      <div class="counter reveal"><b>[XX]</b><span data-i18n="rec.c1">Properties acquired</span><small data-i18n="rec.hist">Historical figure. Past performance does not predict future results.</small></div>
+      <div class="counter reveal"><b>[X]</b><span data-i18n="rec.c2">Markets covered</span><small data-i18n="rec.asof">As of publication date.</small></div>
+      <div class="counter reveal"><b>$[XX]M</b><span data-i18n="rec.c3">Capital deployed</span><small data-i18n="rec.hist2">Historical figure. Past performance does not predict future results.</small></div>
+      <div class="counter reveal"><b>[XX]</b><span data-i18n="rec.c4">Exits completed</span><small data-i18n="rec.hist3">Historical figure. Past performance does not predict future results.</small></div>
+      <div class="counter reveal"><b>[X]% to [X]%</b><span data-i18n="rec.c5">Target project-level returns</span><small data-i18n="rec.target">Target range only, defined deal by deal in underwriting. Not a promise of results.</small></div>
+    </div>
+    <p class="legal-note reveal" data-i18n="rec.note">Figures shown are placeholders pending publication. Historical figures will carry their dates and context. Past performance does not predict future results.</p>
+  </section>
+
+  <!-- STRATEGIES -->
+  <div class="strat-head reveal">
+    <p class="kicker" data-i18n="str.kicker">What we do</p>
+    <h2 data-i18n="str.title">Three disciplines, one thesis</h2>
+  </div>
+
+  <section class="strategy" id="s1">
+    <div class="strat-media">
+      <video muted loop playsinline autoplay preload="metadata" poster="assets/posters/craft.webp" aria-hidden="true">
+        <source src="assets/clips/craft.mp4" type="video/mp4">
+      </video>
+      <div class="media-tint"></div>
+    </div>
+    <div class="strat-copy">
+      <span class="num">01</span>
+      <h3 data-i18n="s1.title">Fix &amp; Flip</h3>
+      <p class="reveal" data-i18n="s1.body">Undervalued homes, acquired below replacement cost, restored to the standard of the street, and sold on a short horizon. Target project-level returns are set in writing, deal by deal, before we commit.</p>
+      <p class="note reveal" data-i18n="s1.note">Target figures only. Every underwriting states its risks. Past performance does not predict future results.</p>
+    </div>
+  </section>
+
+  <section class="strategy rev" id="s2">
+    <div class="strat-media">
+      <video muted loop playsinline autoplay preload="metadata" poster="assets/posters/multifamily.webp" aria-hidden="true">
+        <source src="assets/clips/multifamily.mp4" type="video/mp4">
+      </video>
+      <div class="media-tint"></div>
+    </div>
+    <div class="strat-copy">
+      <span class="num">02</span>
+      <h3 data-i18n="s2.title">Rehab &amp; Rent</h3>
+      <p class="reveal" data-i18n="s2.body">Renovated, leased and professionally managed. Income-producing assets held for patient capital, with target yields defined in underwriting, never promised.</p>
+      <p class="note reveal" data-i18n="s2.note">Target figures only. Every underwriting states its risks. Past performance does not predict future results.</p>
+    </div>
+  </section>
+
+  <section class="strategy" id="s3">
+    <div class="strat-media">
+      <video muted loop playsinline autoplay preload="metadata" poster="assets/posters/exit.webp" aria-hidden="true">
+        <source src="assets/clips/exit.mp4" type="video/mp4">
+      </video>
+      <div class="media-tint"></div>
+    </div>
+    <div class="strat-copy">
+      <span class="num">03</span>
+      <h3 data-i18n="s3.title">The Institutional Exit</h3>
+      <p class="reveal" data-i18n="s3.body">Every asset is underwritten from day one to the buy-box criteria of SFR funds and institutional acquirers. We build what institutions already want to own.</p>
+      <p class="note reveal" data-i18n="s3.note">An exit thesis, not a promise. Execution and timing depend on markets and on each asset.</p>
+    </div>
+  </section>
+
+  <!-- HOW CO-INVESTING WORKS -->
+  <section class="how" id="how">
+    <div class="head reveal">
+      <p class="kicker" data-i18n="how.kicker">The process</p>
+      <h2 data-i18n="how.title">How co-investing works</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="n">01</span>
+        <h3 data-i18n="how.s1t">An introductory call</h3>
+        <p data-i18n="how.s1b">A conversation first. We present the firm, you share your objectives, and we decide together whether there is a fit.</p>
+      </div>
+      <div class="step reveal">
+        <span class="n">02</span>
+        <h3 data-i18n="how.s2t">An underwriting memo on a live deal</h3>
+        <p data-i18n="how.s2b">You receive the full memo on a live acquisition: basis, budget, timeline, target project-level returns, and the risks as we see them.</p>
+      </div>
+      <div class="step reveal">
+        <span class="n">03</span>
+        <h3 data-i18n="how.s3t">Participation through definitive documents</h3>
+        <p data-i18n="how.s3b">Any participation is completed exclusively through definitive offering documents, reviewed with your own counsel.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PRINCIPAL -->
+  <section class="principal" id="principal">
+    <div class="inner">
+      <div class="side reveal">
+        <svg class="mono-lg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="60" height="60" rx="6" stroke="#b08d57" stroke-width="1.2"/>
+          <rect x="6.5" y="6.5" width="51" height="51" rx="3.5" stroke="#b08d57" stroke-width=".6" opacity=".55"/>
+          <text x="32" y="41" text-anchor="middle" font-family="Georgia,serif" font-size="24" letter-spacing="1" fill="#f0e9dc">CH</text>
+        </svg>
+        <p class="kicker" data-i18n="pr.kicker">The principal</p>
+        <h2>David Hazout Levy</h2>
+        <p class="langs">EN &middot; FR &middot; ES &middot; AR</p>
+      </div>
+      <div class="bio reveal">
+        <p data-i18n="pr.b1">David Hazout Levy is the founder of Collective Horizon, a Miami based family office dedicated to American residential real assets. He holds an MSc in International Finance from HEC Paris and is also the founder of Reissers Capital.</p>
+        <p data-i18n="pr.b2">The register is patrimonial: discipline over volume, underwriting over narrative, long relationships over transactions. He works in English, French, Spanish and Arabic.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="head reveal">
+      <p class="kicker" data-i18n="faq.kicker">Questions</p>
+      <h2 data-i18n="faq.title">Direct answers</h2>
+    </div>
+    <div class="faq-list reveal">
+      <details>
+        <summary><span data-i18n="faq.q1">Is this an offer of securities?</span><span class="mark" aria-hidden="true">+</span></summary>
+        <p class="a" data-i18n="faq.a1">No. This site is informational only. Nothing on it constitutes an offer to sell or a solicitation of an offer to buy any security. Any opportunity is presented only to qualified investors, through definitive offering documents.</p>
+      </details>
+      <details>
+        <summary><span data-i18n="faq.q2">Who can request the investor presentation?</span><span class="mark" aria-hidden="true">+</span></summary>
+        <p class="a" data-i18n="faq.a2">Accredited or otherwise qualified investors acting at their own initiative. The request form asks you to confirm this before it can be sent.</p>
+      </details>
+      <details>
+        <summary><span data-i18n="faq.q3">What returns should I expect?</span><span class="mark" aria-hidden="true">+</span></summary>
+        <p class="a" data-i18n="faq.a3">We do not promise returns. Each underwriting memo states target project-level figures for that specific deal, together with the risks we see. Where historical figures appear, past performance does not predict future results.</p>
+      </details>
+      <details>
+        <summary><span data-i18n="faq.q4">How is a co-investment structured?</span><span class="mark" aria-hidden="true">+</span></summary>
+        <p class="a" data-i18n="faq.a4">Deal by deal, through definitive documents prepared by counsel. Structure, economics and reporting are set out in writing before any commitment.</p>
+      </details>
+      <details>
+        <summary><span data-i18n="faq.q5">Which markets does Collective Horizon cover?</span><span class="mark" aria-hidden="true">+</span></summary>
+        <p class="a" data-i18n="faq.a5">High-yield American residential markets, selected for supply, demand and exit depth. The current market list is detailed in the investor presentation.</p>
+      </details>
+      <details>
+        <summary><span data-i18n="faq.q6">How do I begin?</span><span class="mark" aria-hidden="true">+</span></summary>
+        <p class="a" data-i18n="faq.a6">Request the investor presentation below. We respond within one business day.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="finale" id="contact">
+    <h2 class="reveal" data-i18n="fin.title">A conversation first.</h2>
+    <p class="reveal" data-i18n="fin.sub">Request the investor presentation. We respond within one business day.</p>
+    <div class="row reveal">
+      <button class="cta js-open-drawer" data-i18n="cta.main">Request the Investor Presentation</button>
+      <a id="calBtn" class="cta ghost" href="#" target="_blank" rel="noopener" hidden data-i18n="cta.call">Schedule an introductory call</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="60" height="60" rx="6" stroke="#b08d57" stroke-width="1.6"/>
+          <rect x="6.5" y="6.5" width="51" height="51" rx="3.5" stroke="#b08d57" stroke-width=".7" opacity=".55"/>
+          <text x="32" y="41" text-anchor="middle" font-family="Georgia,serif" font-size="24" letter-spacing="1" fill="#f0e9dc">CH</text>
+        </svg>
+        <b>COLLECTIVE&nbsp;HORIZON</b>
+      </div>
+      <div class="foot-meta">
+        <span data-i18n="foot.loc">Miami, Florida</span>
+        <a href="mailto:davidhazout@gmail.com">davidhazout@gmail.com</a>
+        <a href="https://wa.me/13057732177" target="_blank" rel="noopener">WhatsApp +1 305 773 2177</a>
+      </div>
+    </div>
+    <p class="disclaimer" data-i18n="foot.disc">Collective Horizon is a private family office. Nothing on this site constitutes an offer to sell or a solicitation of an offer to buy any security, nor investment, legal or tax advice. Any opportunity is available only to qualified investors, through definitive offering documents. Past performance does not predict future results. All investments involve risk, including loss of capital.</p>
+    <div class="foot-bottom">
+      <span data-i18n="foot.rights">&copy; 2026 Collective Horizon. All rights reserved.</span>
+      <span class="links">
+        <a href="privacy.html" data-i18n="foot.privacy">Privacy</a>
+        <a href="terms.html" data-i18n="foot.terms">Terms</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile bottom bar -->
+<div id="mobileBar">
+  <a class="mini" href="tel:+13057732177" data-i18n="bar.call">Call</a>
+  <a class="mini" href="https://wa.me/13057732177" target="_blank" rel="noopener">WhatsApp</a>
+  <button class="cta js-open-drawer" data-i18n="cta.main">Request the Investor Presentation</button>
+</div>
+
+<!-- Investor drawer -->
+<dialog class="drawer" id="drawer" data-i18n-aria="drawer.aria" aria-label="Investor presentation request">
+  <div class="drawer-inner">
+    <div class="drawer-head">
+      <h2 data-i18n="cta.main">Request the Investor Presentation</h2>
+      <button id="drawerClose" data-i18n-aria="drawer.close" aria-label="Close">&#10005;</button>
+    </div>
+    <p class="drawer-sub" data-i18n="form.sub">We respond within one business day.</p>
+    <form id="leadForm" novalidate>
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="drawer-inner" style="padding:0;gap:1.2rem">
+        <div class="field">
+          <label for="fName" data-i18n="form.name">Full name</label>
+          <input id="fName" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="fEmail" data-i18n="form.email">Email</label>
+          <input id="fEmail" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="fPhone" data-i18n="form.phone">Phone (optional)</label>
+          <input id="fPhone" name="phone" type="tel" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="fTicket" data-i18n="form.ticket">Indicative ticket range</label>
+          <select id="fTicket" name="ticket">
+            <option value="discuss" data-i18n="form.t0">Prefer to discuss</option>
+            <option value="50-100">$50k to $100k</option>
+            <option value="100-250">$100k to $250k</option>
+            <option value="250-500">$250k to $500k</option>
+            <option value="500+" data-i18n="form.t4">$500k and above</option>
+          </select>
+        </div>
+        <label class="check" id="accWrap">
+          <input id="fAcc" name="accredited" type="checkbox" required>
+          <span data-i18n="form.acc">I confirm I am an accredited or otherwise qualified investor and I request this information at my own initiative.</span>
+        </label>
+        <p class="form-note" data-i18n="form.nofin">We do not collect financial details through this site.</p>
+        <p class="form-error" id="formError" role="alert" data-i18n="form.err">Please complete the highlighted fields.</p>
+        <button type="submit" class="cta" id="formSubmit" data-i18n="form.send">Send the request</button>
+        <p class="form-success" id="formSuccess" role="status" data-i18n="form.ok">Thank you. Your request has been received.</p>
+      </div>
+    </form>
+    <p class="drawer-cal" id="drawerCal"><a href="#" target="_blank" rel="noopener" data-i18n="cta.call">Schedule an introductory call</a></p>
+  </div>
+</dialog>
+
+<audio id="bgm" loop preload="none">
+  <source src="assets/audio/ambient.m4a" type="audio/mp4">
+  <source src="assets/audio/ambient.mp3" type="audio/mpeg">
+</audio>
+
+<noscript><style>#preloader{display:none}.reveal{opacity:1;transform:none}</style></noscript>
+
+<script>
+"use strict";
+/* Configuration. PLACEHOLDERS: SITE_URL and CAL_LINK pending confirmation. */
+var CH = {
+  SITE_URL: "https://collectivehorizon.com",
+  LEAD_EMAIL: "davidhazout@gmail.com",
+  CAL_LINK: "",
+  FRAME_COUNT: 0,
+  frameUrl: function(i){ return "assets/frames/frame_" + String(i).padStart(4, "0") + ".webp"; },
+  HERO_STILL: "assets/hero-still.webp"
+};
+
+/* ---------------- i18n ---------------- */
+var I18N = {
+  en: {
+    "meta.title": "Collective Horizon. A family office for American residential real assets.",
+    "meta.desc": "Collective Horizon is a Miami based family office acquiring single-family and multifamily properties across high-yield American markets, underwritten from day one to institutional exit criteria.",
+    "cta.main": "Request the Investor Presentation",
+    "cta.call": "Schedule an introductory call",
+    "sound.aria": "Toggle ambient sound",
+    "hero.kicker": "A private family office, Miami",
+    "hero.sub": "A family office for American residential real assets.",
+    "hero.cue": "Scroll",
+    "intro.kicker": "The firm",
+    "intro.line": "We acquire single-family and multifamily properties across high-yield American markets. Every asset is underwritten from day one to the buy-box criteria of institutional acquirers.",
+    "rec.kicker": "The record",
+    "rec.title": "Discipline, in figures",
+    "rec.c1": "Properties acquired",
+    "rec.c2": "Markets covered",
+    "rec.c3": "Capital deployed",
+    "rec.c4": "Exits completed",
+    "rec.c5": "Target project-level returns",
+    "rec.hist": "Historical figure. Past performance does not predict future results.",
+    "rec.hist2": "Historical figure. Past performance does not predict future results.",
+    "rec.hist3": "Historical figure. Past performance does not predict future results.",
+    "rec.asof": "As of publication date.",
+    "rec.target": "Target range only, defined deal by deal in underwriting. Not a promise of results.",
+    "rec.note": "Figures shown are placeholders pending publication. Historical figures will carry their dates and context. Past performance does not predict future results.",
+    "str.kicker": "What we do",
+    "str.title": "Three disciplines, one thesis",
+    "s1.title": "Fix & Flip",
+    "s1.body": "Undervalued homes, acquired below replacement cost, restored to the standard of the street, and sold on a short horizon. Target project-level returns are set in writing, deal by deal, before we commit.",
+    "s1.note": "Target figures only. Every underwriting states its risks. Past performance does not predict future results.",
+    "s2.title": "Rehab & Rent",
+    "s2.body": "Renovated, leased and professionally managed. Income-producing assets held for patient capital, with target yields defined in underwriting, never promised.",
+    "s2.note": "Target figures only. Every underwriting states its risks. Past performance does not predict future results.",
+    "s3.title": "The Institutional Exit",
+    "s3.body": "Every asset is underwritten from day one to the buy-box criteria of SFR funds and institutional acquirers. We build what institutions already want to own.",
+    "s3.note": "An exit thesis, not a promise. Execution and timing depend on markets and on each asset.",
+    "how.kicker": "The process",
+    "how.title": "How co-investing works",
+    "how.s1t": "An introductory call",
+    "how.s1b": "A conversation first. We present the firm, you share your objectives, and we decide together whether there is a fit.",
+    "how.s2t": "An underwriting memo on a live deal",
+    "how.s2b": "You receive the full memo on a live acquisition: basis, budget, timeline, target project-level returns, and the risks as we see them.",
+    "how.s3t": "Participation through definitive documents",
+    "how.s3b": "Any participation is completed exclusively through definitive offering documents, reviewed with your own counsel.",
+    "pr.kicker": "The principal",
+    "pr.b1": "David Hazout Levy is the founder of Collective Horizon, a Miami based family office dedicated to American residential real assets. He holds an MSc in International Finance from HEC Paris and is also the founder of Reissers Capital.",
+    "pr.b2": "The register is patrimonial: discipline over volume, underwriting over narrative, long relationships over transactions. He works in English, French, Spanish and Arabic.",
+    "faq.kicker": "Questions",
+    "faq.title": "Direct answers",
+    "faq.q1": "Is this an offer of securities?",
+    "faq.a1": "No. This site is informational only. Nothing on it constitutes an offer to sell or a solicitation of an offer to buy any security. Any opportunity is presented only to qualified investors, through definitive offering documents.",
+    "faq.q2": "Who can request the investor presentation?",
+    "faq.a2": "Accredited or otherwise qualified investors acting at their own initiative. The request form asks you to confirm this before it can be sent.",
+    "faq.q3": "What returns should I expect?",
+    "faq.a3": "We do not promise returns. Each underwriting memo states target project-level figures for that specific deal, together with the risks we see. Where historical figures appear, past performance does not predict future results.",
+    "faq.q4": "How is a co-investment structured?",
+    "faq.a4": "Deal by deal, through definitive documents prepared by counsel. Structure, economics and reporting are set out in writing before any commitment.",
+    "faq.q5": "Which markets does Collective Horizon cover?",
+    "faq.a5": "High-yield American residential markets, selected for supply, demand and exit depth. The current market list is detailed in the investor presentation.",
+    "faq.q6": "How do I begin?",
+    "faq.a6": "Request the investor presentation below. We respond within one business day.",
+    "fin.title": "A conversation first.",
+    "fin.sub": "Request the investor presentation. We respond within one business day.",
+    "foot.loc": "Miami, Florida",
+    "foot.disc": "Collective Horizon is a private family office. Nothing on this site constitutes an offer to sell or a solicitation of an offer to buy any security, nor investment, legal or tax advice. Any opportunity is available only to qualified investors, through definitive offering documents. Past performance does not predict future results. All investments involve risk, including loss of capital.",
+    "foot.rights": "© 2026 Collective Horizon. All rights reserved.",
+    "foot.privacy": "Privacy",
+    "foot.terms": "Terms",
+    "bar.call": "Call",
+    "drawer.aria": "Investor presentation request",
+    "drawer.close": "Close",
+    "form.sub": "We respond within one business day.",
+    "form.name": "Full name",
+    "form.email": "Email",
+    "form.phone": "Phone (optional)",
+    "form.ticket": "Indicative ticket range",
+    "form.t0": "Prefer to discuss",
+    "form.t4": "$500k and above",
+    "form.acc": "I confirm I am an accredited or otherwise qualified investor and I request this information at my own initiative.",
+    "form.nofin": "We do not collect financial details through this site.",
+    "form.err": "Please complete the highlighted fields.",
+    "form.send": "Send the request",
+    "form.ok": "Thank you. Your request has been received."
+  },
+  fr: {
+    "meta.title": "Collective Horizon. Un family office pour l'immobilier résidentiel américain.",
+    "meta.desc": "Collective Horizon est un family office basé à Miami qui acquiert des maisons individuelles et des immeubles résidentiels sur des marchés américains à fort rendement, souscrits dès le premier jour selon des critères de sortie institutionnels.",
+    "cta.main": "Demander la présentation investisseurs",
+    "cta.call": "Planifier un appel d'introduction",
+    "sound.aria": "Activer ou couper le son d'ambiance",
+    "hero.kicker": "Un family office privé, Miami",
+    "hero.sub": "Un family office pour l'immobilier résidentiel américain.",
+    "hero.cue": "Faites défiler",
+    "intro.kicker": "La maison",
+    "intro.line": "Nous acquérons des maisons individuelles et des immeubles résidentiels sur des marchés américains à fort rendement. Chaque actif est souscrit dès le premier jour selon les critères d'acquisition des investisseurs institutionnels.",
+    "rec.kicker": "Le parcours",
+    "rec.title": "La discipline, en chiffres",
+    "rec.c1": "Propriétés acquises",
+    "rec.c2": "Marchés couverts",
+    "rec.c3": "Capital déployé",
+    "rec.c4": "Sorties réalisées",
+    "rec.c5": "Rendements cibles par projet",
+    "rec.hist": "Donnée historique. Les performances passées ne préjugent pas des résultats futurs.",
+    "rec.hist2": "Donnée historique. Les performances passées ne préjugent pas des résultats futurs.",
+    "rec.hist3": "Donnée historique. Les performances passées ne préjugent pas des résultats futurs.",
+    "rec.asof": "À la date de publication.",
+    "rec.target": "Fourchette cible uniquement, définie projet par projet lors de la souscription. Aucune promesse de résultat.",
+    "rec.note": "Les chiffres affichés sont provisoires, dans l'attente de publication. Les données historiques seront datées et contextualisées. Les performances passées ne préjugent pas des résultats futurs.",
+    "str.kicker": "Notre métier",
+    "str.title": "Trois disciplines, une thèse",
+    "s1.title": "Fix & Flip",
+    "s1.body": "Des maisons décotées, acquises sous leur coût de remplacement, restaurées au niveau de la rue, puis cédées à horizon court. Les rendements cibles par projet sont fixés par écrit, dossier par dossier, avant tout engagement.",
+    "s1.note": "Objectifs uniquement. Chaque souscription énonce ses risques. Les performances passées ne préjugent pas des résultats futurs.",
+    "s2.title": "Rehab & Rent",
+    "s2.body": "Rénovés, loués, gérés par des professionnels. Des actifs de rendement détenus par un capital patient, avec des objectifs définis lors de la souscription, jamais promis.",
+    "s2.note": "Objectifs uniquement. Chaque souscription énonce ses risques. Les performances passées ne préjugent pas des résultats futurs.",
+    "s3.title": "La sortie institutionnelle",
+    "s3.body": "Chaque actif est souscrit dès le premier jour selon les critères d'acquisition des fonds SFR et des acquéreurs institutionnels. Nous construisons ce que les institutions veulent déjà détenir.",
+    "s3.note": "Une thèse de sortie, pas une promesse. L'exécution et le calendrier dépendent des marchés et de chaque actif.",
+    "how.kicker": "Le processus",
+    "how.title": "Comment co-investir",
+    "how.s1t": "Un appel d'introduction",
+    "how.s1b": "Une conversation d'abord. Nous présentons la maison, vous partagez vos objectifs, et nous décidons ensemble s'il y a lieu de poursuivre.",
+    "how.s2t": "Une note de souscription sur un dossier réel",
+    "how.s2b": "Vous recevez la note complète d'une acquisition en cours : prix de revient, budget, calendrier, rendements cibles du projet et les risques tels que nous les voyons.",
+    "how.s3t": "Une participation par documents définitifs",
+    "how.s3b": "Toute participation s'effectue exclusivement au travers de documents d'offre définitifs, revus avec vos propres conseils.",
+    "pr.kicker": "Le fondateur",
+    "pr.b1": "David Hazout Levy est le fondateur de Collective Horizon, un family office basé à Miami et dédié à l'immobilier résidentiel américain. Diplômé d'HEC Paris (MSc International Finance), il est également le fondateur de Reissers Capital.",
+    "pr.b2": "Le registre est patrimonial : la discipline plutôt que le volume, la souscription plutôt que le discours, les relations longues plutôt que les transactions. Il travaille en anglais, français, espagnol et arabe.",
+    "faq.kicker": "Questions",
+    "faq.title": "Des réponses directes",
+    "faq.q1": "S'agit-il d'une offre de titres financiers ?",
+    "faq.a1": "Non. Ce site est purement informatif. Rien sur ce site ne constitue une offre de vente ni une sollicitation d'achat de titres financiers. Toute opportunité est présentée uniquement à des investisseurs qualifiés, au travers de documents d'offre définitifs.",
+    "faq.q2": "Qui peut demander la présentation investisseurs ?",
+    "faq.a2": "Des investisseurs accrédités ou autrement qualifiés, agissant de leur propre initiative. Le formulaire vous demande de le confirmer avant tout envoi.",
+    "faq.q3": "Quels rendements puis-je attendre ?",
+    "faq.a3": "Nous ne promettons aucun rendement. Chaque note de souscription indique des objectifs propres au projet concerné, ainsi que les risques que nous identifions. Lorsque des données historiques sont présentées, les performances passées ne préjugent pas des résultats futurs.",
+    "faq.q4": "Comment un co-investissement est-il structuré ?",
+    "faq.a4": "Dossier par dossier, au travers de documents définitifs préparés par des avocats. Structure, conditions économiques et reporting sont fixés par écrit avant tout engagement.",
+    "faq.q5": "Quels marchés couvre Collective Horizon ?",
+    "faq.a5": "Des marchés résidentiels américains à fort rendement, choisis pour leur offre, leur demande et la profondeur de leurs sorties. La liste des marchés figure dans la présentation investisseurs.",
+    "faq.q6": "Par où commencer ?",
+    "faq.a6": "Demandez la présentation investisseurs ci-dessous. Nous répondons sous un jour ouvré.",
+    "fin.title": "Une conversation, d'abord.",
+    "fin.sub": "Demandez la présentation investisseurs. Nous répondons sous un jour ouvré.",
+    "foot.loc": "Miami, Floride",
+    "foot.disc": "Collective Horizon est un family office privé. Rien sur ce site ne constitue une offre de vente ou une sollicitation d'achat de titres financiers, ni un conseil en investissement, juridique ou fiscal. Toute opportunité est réservée aux seuls investisseurs qualifiés, au travers de documents d'offre définitifs. Les performances passées ne préjugent pas des résultats futurs. Tout investissement comporte des risques, y compris la perte du capital.",
+    "foot.rights": "© 2026 Collective Horizon. Tous droits réservés.",
+    "foot.privacy": "Confidentialité",
+    "foot.terms": "Conditions",
+    "bar.call": "Appeler",
+    "drawer.aria": "Demande de présentation investisseurs",
+    "drawer.close": "Fermer",
+    "form.sub": "Nous répondons sous un jour ouvré.",
+    "form.name": "Nom complet",
+    "form.email": "Email",
+    "form.phone": "Téléphone (facultatif)",
+    "form.ticket": "Fourchette de ticket indicative",
+    "form.t0": "Je préfère en parler",
+    "form.t4": "$500k et plus",
+    "form.acc": "Je confirme être un investisseur accrédité ou autrement qualifié et demander ces informations de ma propre initiative.",
+    "form.nofin": "Nous ne collectons aucune donnée financière via ce site.",
+    "form.err": "Merci de compléter les champs signalés.",
+    "form.send": "Envoyer la demande",
+    "form.ok": "Merci. Votre demande a bien été reçue."
+  }
+};
+
+var params = new URLSearchParams(location.search);
+var lang = "en";
+function detectLang(){
+  var q = (params.get("lang") || "").toLowerCase().slice(0, 2);
+  if (q === "en" || q === "fr") return q;
+  var ls = null;
+  try { ls = localStorage.getItem("ch_lang"); } catch (e) {}
+  if (ls === "en" || ls === "fr") return ls;
+  return (navigator.language || "en").toLowerCase().indexOf("fr") === 0 ? "fr" : "en";
+}
+function applyLang(l){
+  lang = l;
+  document.documentElement.lang = l;
+  var d = I18N[l];
+  document.title = d["meta.title"];
+  var md = document.querySelector('meta[name="description"]');
+  if (md) md.setAttribute("content", d["meta.desc"]);
+  document.querySelectorAll("[data-i18n]").forEach(function(el){
+    var k = el.getAttribute("data-i18n");
+    if (d[k] !== undefined) el.textContent = d[k];
+  });
+  document.querySelectorAll("[data-i18n-aria]").forEach(function(el){
+    var k = el.getAttribute("data-i18n-aria");
+    if (d[k] !== undefined) el.setAttribute("aria-label", d[k]);
+  });
+  document.getElementById("langEn").setAttribute("aria-pressed", l === "en" ? "true" : "false");
+  document.getElementById("langFr").setAttribute("aria-pressed", l === "fr" ? "true" : "false");
+}
+document.getElementById("langEn").addEventListener("click", function(){ try { localStorage.setItem("ch_lang", "en"); } catch (e) {} applyLang("en"); });
+document.getElementById("langFr").addEventListener("click", function(){ try { localStorage.setItem("ch_lang", "fr"); } catch (e) {} applyLang("fr"); });
+applyLang(detectLang());
+
+/* ---------------- Hero title letter split ---------------- */
+(function(){
+  var h = document.getElementById("heroTitle");
+  var words = ["COLLECTIVE", "HORIZON"];
+  var idx = 0;
+  words.forEach(function(w, wi){
+    if (wi > 0) {
+      var sp = document.createElement("span");
+      sp.className = "sp";
+      h.appendChild(sp);
+    }
+    var wEl = document.createElement("span");
+    wEl.className = "word";
+    for (var i = 0; i < w.length; i++) {
+      var c = document.createElement("span");
+      c.className = "ch";
+      c.textContent = w[i];
+      c.style.transitionDelay = (0.35 + idx * 0.045) + "s";
+      wEl.appendChild(c);
+      idx++;
+    }
+    h.appendChild(wEl);
+  });
+})();
+
+/* ---------------- Canvas scrub hero ---------------- */
+var heroEl = document.getElementById("hero");
+var canvas = document.getElementById("scrub");
+var ctx = canvas.getContext("2d");
+var DPR = Math.min(window.devicePixelRatio || 1, 2);
+var frames = [];
+var framesLoaded = 0;
+var heroStill = null;
+var lastDrawn = -1;
+
+function sizeCanvas(){
+  DPR = Math.min(window.devicePixelRatio || 1, 2);
+  var w = canvas.clientWidth, hh = canvas.clientHeight;
+  canvas.width = Math.round(w * DPR);
+  canvas.height = Math.round(hh * DPR);
+  lastDrawn = -1;
+  renderScrub(true);
+}
+window.addEventListener("resize", sizeCanvas);
+
+function coverDraw(img){
+  var cw = canvas.width, chh = canvas.height;
+  var iw = img.naturalWidth || img.width, ih = img.naturalHeight || img.height;
+  if (!iw || !ih) return;
+  var s = Math.max(cw / iw, chh / ih);
+  var dw = iw * s, dh = ih * s;
+  ctx.drawImage(img, (cw - dw) / 2, (chh - dh) / 2, dw, dh);
+}
+function heroProgress(){
+  var span = heroEl.offsetHeight - window.innerHeight;
+  if (span <= 0) return 0;
+  var y = window.scrollY || window.pageYOffset || 0;
+  return Math.min(1, Math.max(0, y / span));
+}
+function nearestLoaded(i){
+  if (frames[i] && frames[i].ok) return i;
+  for (var d = 1; d < CH.FRAME_COUNT; d++) {
+    if (frames[i - d] && frames[i - d].ok) return i - d;
+    if (frames[i + d] && frames[i + d].ok) return i + d;
+  }
+  return -1;
+}
+function drawFallback(p){
+  var cw = canvas.width, chh = canvas.height;
+  ctx.fillStyle = "#0f1512";
+  ctx.fillRect(0, 0, cw, chh);
+  var gx = cw * (0.5 + 0.12 * Math.sin(p * Math.PI));
+  var gy = chh * (0.6 - 0.15 * p);
+  var r = Math.max(cw, chh) * (0.5 + 0.25 * p);
+  var g = ctx.createRadialGradient(gx, gy, 0, gx, gy, r);
+  g.addColorStop(0, "rgba(176,141,87,0.20)");
+  g.addColorStop(0.45, "rgba(24,32,25,0.6)");
+  g.addColorStop(1, "#0d1210");
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, cw, chh);
+}
+function renderScrub(force){
+  var p = heroProgress();
+  if (CH.FRAME_COUNT > 1) {
+    var i = Math.round(p * (CH.FRAME_COUNT - 1));
+    var n = nearestLoaded(i);
+    if (n < 0) { drawFallback(p); return; }
+    if (n === lastDrawn && !force) return;
+    lastDrawn = n;
+    coverDraw(frames[n].img);
+  } else if (heroStill && heroStill.ok) {
+    var cw = canvas.width, chh = canvas.height;
+    ctx.fillStyle = "#0f1512";
+    ctx.fillRect(0, 0, cw, chh);
+    ctx.save();
+    var sc = 1 + p * 0.08;
+    ctx.translate(cw / 2, chh / 2);
+    ctx.scale(sc, sc);
+    ctx.translate(-cw / 2, -chh / 2);
+    coverDraw(heroStill.img);
+    ctx.restore();
+  } else {
+    drawFallback(p);
+  }
+}
+function markReady(){
+  if (!document.body.classList.contains("ready")) document.body.classList.add("ready");
+}
+function beginFrames(){
+  if (CH.FRAME_COUNT > 1) {
+    var readyAt = Math.min(10, CH.FRAME_COUNT);
+    var queue = [];
+    for (var i = 0; i < CH.FRAME_COUNT; i++) queue.push(i);
+    var active = 0, MAXC = 8;
+    function next(){
+      while (active < MAXC && queue.length) {
+        (function(i){
+          active++;
+          var img = new Image();
+          img.decoding = "async";
+          img.onload = function(){
+            frames[i] = { img: img, ok: true };
+            framesLoaded++;
+            if (framesLoaded === readyAt) markReady();
+            if (framesLoaded <= readyAt || i === 0) renderScrub(true);
+            active--; next();
+          };
+          img.onerror = function(){ frames[i] = { ok: false }; active--; next(); };
+          img.src = CH.frameUrl(i + 1);
+        })(queue.shift());
+      }
+    }
+    next();
+  } else {
+    var img = new Image();
+    img.decoding = "async";
+    img.onload = function(){ heroStill = { img: img, ok: true }; markReady(); renderScrub(true); };
+    img.onerror = function(){ heroStill = { ok: false }; markReady(); renderScrub(true); };
+    img.src = CH.HERO_STILL;
+  }
+}
+(function initFrames(){
+  setTimeout(markReady, 5200);
+  fetch("assets/frames/count.json", { cache: "no-cache" }).then(function(r){
+    if (!r.ok) throw new Error("no frames");
+    return r.json();
+  }).then(function(j){
+    if (j && j.count > 1) CH.FRAME_COUNT = j.count;
+    beginFrames();
+  }).catch(function(){ beginFrames(); });
+})();
+
+/* ---------------- Custom smooth wheel scroll ----------------
+   Wheel handler feeds a lerped target consumed in the rAF tick.
+   Direct window.scrollTo fallback when performance.now() minus lastTick
+   exceeds 200ms, plus a scroll listener driving the scrub when rAF is starved. */
+var REDUCED = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var smooth = { target: window.scrollY || 0, current: window.scrollY || 0, lastTick: 0 };
+function maxScroll(){
+  return Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+}
+window.addEventListener("wheel", function(e){
+  if (REDUCED) return;
+  if (document.querySelector("dialog[open]")) return;
+  if (e.ctrlKey) return;
+  e.preventDefault();
+  var dy = e.deltaY;
+  if (e.deltaMode === 1) dy *= 16;
+  else if (e.deltaMode === 2) dy *= window.innerHeight;
+  smooth.target = Math.min(maxScroll(), Math.max(0, smooth.target + dy));
+  if (performance.now() - smooth.lastTick > 200) {
+    smooth.current = smooth.target;
+    window.scrollTo(0, smooth.target);
+  }
+}, { passive: false });
+
+function tick(now){
+  smooth.lastTick = now;
+  if (!REDUCED) {
+    var d = smooth.target - smooth.current;
+    if (Math.abs(d) > 0.1) {
+      smooth.current += d * 0.115;
+      if (Math.abs(smooth.target - smooth.current) < 0.5) smooth.current = smooth.target;
+      window.scrollTo(0, smooth.current);
+    }
+  }
+  renderScrub();
+  requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
+
+window.addEventListener("scroll", function(){
+  var y = window.scrollY || 0;
+  if (Math.abs(y - smooth.current) > 2) { smooth.current = y; smooth.target = y; }
+  if (performance.now() - smooth.lastTick > 200) renderScrub();
+  var hdr = document.getElementById("hdr");
+  if (y > 40) hdr.classList.add("solid"); else hdr.classList.remove("solid");
+}, { passive: true });
+
+sizeCanvas();
+
+/* ---------------- Reveal on scroll ---------------- */
+(function(){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.18 });
+  document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+})();
+
+/* ---------------- Video play management ---------------- */
+(function(){
+  var vids = document.querySelectorAll("video");
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      var v = en.target;
+      if (en.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function(){}); }
+      else v.pause();
+    });
+  }, { threshold: 0.12 });
+  vids.forEach(function(v){ io.observe(v); });
+})();
+
+/* ---------------- Drawer ---------------- */
+var drawer = document.getElementById("drawer");
+var lastFocus = null;
+function openDrawer(){
+  lastFocus = document.activeElement;
+  drawer.showModal();
+  document.body.style.overflow = "hidden";
+  var f = document.getElementById("fName");
+  if (f) setTimeout(function(){ f.focus(); }, 120);
+}
+function closeDrawer(){
+  drawer.close();
+}
+drawer.addEventListener("close", function(){
+  document.body.style.overflow = "";
+  if (lastFocus && lastFocus.focus) lastFocus.focus();
+});
+drawer.addEventListener("click", function(e){
+  if (e.target === drawer) closeDrawer();
+});
+document.getElementById("drawerClose").addEventListener("click", closeDrawer);
+document.querySelectorAll(".js-open-drawer").forEach(function(b){ b.addEventListener("click", openDrawer); });
+if (params.get("consult") === "1") { window.addEventListener("load", function(){ setTimeout(openDrawer, 400); }); }
+
+/* Cal link, hidden until provided */
+(function(){
+  if (CH.CAL_LINK) {
+    var cal = document.getElementById("calBtn");
+    cal.hidden = false;
+    cal.href = CH.CAL_LINK;
+    var dc = document.getElementById("drawerCal");
+    dc.classList.add("on");
+    dc.querySelector("a").href = CH.CAL_LINK;
+  }
+})();
+
+/* ---------------- Form ---------------- */
+(function(){
+  var form = document.getElementById("leadForm");
+  var errLine = document.getElementById("formError");
+  var okLine = document.getElementById("formSuccess");
+  var submitBtn = document.getElementById("formSubmit");
+  function setInvalid(el, bad){
+    if (bad) el.setAttribute("aria-invalid", "true");
+    else el.removeAttribute("aria-invalid");
+  }
+  function success(){
+    okLine.classList.add("show");
+    errLine.classList.remove("show");
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = ".5";
+  }
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var name = document.getElementById("fName");
+    var email = document.getElementById("fEmail");
+    var phone = document.getElementById("fPhone");
+    var ticket = document.getElementById("fTicket");
+    var acc = document.getElementById("fAcc");
+    var accWrap = document.getElementById("accWrap");
+    var bad = false;
+    var okName = name.value.trim().length > 1;
+    var okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim());
+    setInvalid(name, !okName); if (!okName) bad = true;
+    setInvalid(email, !okEmail); if (!okEmail) bad = true;
+    if (!acc.checked) { accWrap.classList.add("invalid"); bad = true; }
+    else accWrap.classList.remove("invalid");
+    if (bad) {
+      errLine.classList.add("show");
+      var firstBad = form.querySelector('[aria-invalid="true"]') || acc;
+      firstBad.focus();
+      return;
+    }
+    errLine.classList.remove("show");
+    var payload = {
+      name: name.value.trim(),
+      email: email.value.trim(),
+      phone: phone.value.trim(),
+      ticket_range: ticket.value,
+      accredited_confirmed: "yes",
+      language: lang,
+      _subject: "Collective Horizon: investor presentation request"
+    };
+    /* Test hook: tests set window.__leadHook so no real email is ever sent. */
+    if (window.__leadHook) { try { window.__leadHook(payload); } catch (err) {} success(); return; }
+    submitBtn.disabled = true;
+    fetch("https://formsubmit.co/ajax/" + CH.LEAD_EMAIL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify(payload)
+    }).then(function(r){
+      if (!r.ok) throw new Error("http " + r.status);
+      return r.json();
+    }).then(function(){
+      success();
+    }).catch(function(){
+      submitBtn.disabled = false;
+      var body = "Name: " + payload.name + "\nEmail: " + payload.email +
+        (payload.phone ? "\nPhone: " + payload.phone : "") +
+        "\nTicket range: " + payload.ticket_range +
+        "\nAccredited or qualified investor, at own initiative: yes\nLanguage: " + payload.language;
+      var mailto = "mailto:" + CH.LEAD_EMAIL +
+        "?subject=" + encodeURIComponent(payload._subject) +
+        "&body=" + encodeURIComponent(body);
+      /* Test hook: tests set window.__mailtoHook so no mail client ever opens. */
+      if (window.__mailtoHook) { try { window.__mailtoHook(mailto); } catch (err) {} success(); return; }
+      location.href = mailto;
+      success();
+    });
+  });
+})();
+
+/* ---------------- Ambient sound ---------------- */
+(function(){
+  var audio = document.getElementById("bgm");
+  var btn = document.getElementById("soundBtn");
+  var started = false;
+  var pref = null;
+  try { pref = localStorage.getItem("ch_sound"); } catch (e) {}
+  if (params.get("sound") === "on") { pref = "on"; try { localStorage.setItem("ch_sound", "on"); } catch (e) {} }
+  function setUi(playing){
+    btn.classList.toggle("muted", !playing);
+    btn.setAttribute("aria-pressed", playing ? "true" : "false");
+    if (started || pref === "off") btn.classList.remove("pulse");
+  }
+  function fadeTo(v){
+    var step = function(){
+      var d = v - audio.volume;
+      if (Math.abs(d) < 0.02) { audio.volume = v; return; }
+      audio.volume += d * 0.12;
+      requestAnimationFrame(step);
+    };
+    step();
+  }
+  function start(){
+    if (started) return;
+    audio.volume = 0;
+    var p = audio.play();
+    if (p && p.then) {
+      p.then(function(){ started = true; fadeTo(0.22); setUi(true); }).catch(function(){});
+    }
+  }
+  /* First gesture: click, touchend or keydown. Never pointerdown. */
+  ["click", "touchend", "keydown"].forEach(function(ev){
+    window.addEventListener(ev, function onFirst(){
+      if (pref !== "off") start();
+      if (started || pref === "off") window.removeEventListener(ev, onFirst);
+    });
+  });
+  btn.addEventListener("click", function(e){
+    e.stopPropagation();
+    if (!started || audio.paused) {
+      pref = "on";
+      try { localStorage.setItem("ch_sound", "on"); } catch (err) {}
+      if (started) { audio.play(); fadeTo(0.22); setUi(true); }
+      else { start(); }
+    } else {
+      pref = "off";
+      try { localStorage.setItem("ch_sound", "off"); } catch (err) {}
+      audio.pause();
+      setUi(false);
+      btn.classList.remove("pulse");
+    }
+  });
+  if (pref === "off") btn.classList.remove("pulse");
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "comment": "Source URLs of generated media on the Higgsfield CDN. scripts/fetch-assets.sh downloads and processes them into assets/. Add clip URLs when the video generations complete, push, and CI does the rest.",
+  "stills": {
+    "hero": "https://d8j0ntlcm91z4.cloudfront.net/user_3EySMZUzUbGakFLyLPoFHW1KflJ/hf_20260724_165111_a721c4e9-21b1-4f48-af65-7d3b727c31ca.png",
+    "street": "https://d8j0ntlcm91z4.cloudfront.net/user_3EySMZUzUbGakFLyLPoFHW1KflJ/hf_20260724_165304_d8ef224f-39b3-4950-9587-9fedb92c22ef.png",
+    "craft": "https://d8j0ntlcm91z4.cloudfront.net/user_3EySMZUzUbGakFLyLPoFHW1KflJ/hf_20260724_165306_22fc8689-637e-424f-b93b-b03f94426d70.png",
+    "multifamily": "https://d8j0ntlcm91z4.cloudfront.net/user_3EySMZUzUbGakFLyLPoFHW1KflJ/hf_20260724_165310_7abfa543-fb1c-4063-a95b-c41e49cc4254.png",
+    "exit": "https://d8j0ntlcm91z4.cloudfront.net/user_3EySMZUzUbGakFLyLPoFHW1KflJ/hf_20260724_165312_4200913d-8ae3-482c-ac10-14249b705dd8.png"
+  },
+  "clips": {
+    "hero_orbit": "",
+    "street": "",
+    "craft": "",
+    "multifamily": "",
+    "exit": ""
+  }
+}

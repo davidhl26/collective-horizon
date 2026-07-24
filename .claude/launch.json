@@ -1,0 +1,11 @@
+{
+  "$comment": "Static preview for the Collective Horizon one-page site. Serves the repo folder; use ?v= cache busting when verifying edits.",
+  "servers": [
+    {
+      "name": "collective-horizon",
+      "command": "python3 -m http.server 4173",
+      "cwd": ".",
+      "url": "http://localhost:4173/index.html"
+    }
+  ]
+}
