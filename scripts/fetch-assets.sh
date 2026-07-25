@@ -58,5 +58,19 @@ if [ -n "$HERO_CLIP" ]; then
   echo "hero scrub frames done"
 fi
 
+# Optional second hero take: contact strips of both takes for review.
+HERO_ALT=$(clip_url hero_orbit_alt)
+if [ -n "$HERO_ALT" ] && [ -n "$HERO_CLIP" ]; then
+  curl -sSL -o "$SRC/hero_alt.mp4" "$HERO_ALT"
+  mkdir -p assets/preview
+  ffmpeg -y -loglevel error -i "$SRC/hero_orbit.mp4" \
+    -vf "select='eq(n,0)+eq(n,96)+eq(n,180)',scale=640:-2,tile=3x1" \
+    -frames:v 1 assets/preview/hero_take1_strip.jpg
+  ffmpeg -y -loglevel error -i "$SRC/hero_alt.mp4" \
+    -vf "select='eq(n,0)+eq(n,96)+eq(n,180)',scale=640:-2,tile=3x1" \
+    -frames:v 1 assets/preview/hero_take2_strip.jpg
+  echo "hero take strips done"
+fi
+
 rm -rf "$SRC"
 echo "all assets processed"
