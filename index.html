@@ -534,6 +534,31 @@ dialog.drawer::backdrop{background:rgba(8,12,10,.62);backdrop-filter:blur(3px)}
     </div>
   </section>
 
+  <!-- WHO WE WORK WITH -->
+  <section class="how" id="capital">
+    <div class="head reveal">
+      <p class="kicker" data-i18n="cap.kicker">The capital</p>
+      <h2 data-i18n="cap.title">Who we work with</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="n">&#8226;</span>
+        <h3 data-i18n="cap.c1t">Private investors</h3>
+        <p data-i18n="cap.c1b">Qualified individuals who co-invest deal by deal, with the full underwriting in hand. Tickets are sized to the deal, never to a fund.</p>
+      </div>
+      <div class="step reveal">
+        <span class="n">&#8226;</span>
+        <h3 data-i18n="cap.c2t">Family offices</h3>
+        <p data-i18n="cap.c2b">Patient capital that shares our register: alignment, discretion, long relationships. Side by side on income assets built to hold.</p>
+      </div>
+      <div class="step reveal">
+        <span class="n">&#8226;</span>
+        <h3 data-i18n="cap.c3t">Funds &amp; institutions</h3>
+        <p data-i18n="cap.c3b">We underwrite to your buy-box from day one. Portfolio pipeline, forward commitments and programmatic partnerships are discussed directly.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- THE PRINCIPAL -->
   <section class="principal" id="principal">
     <div class="inner">
@@ -580,6 +605,10 @@ dialog.drawer::backdrop{background:rgba(8,12,10,.62);backdrop-filter:blur(3px)}
       <details>
         <summary><span data-i18n="faq.q5">Which markets does Collective Horizon cover?</span><span class="mark" aria-hidden="true">+</span></summary>
         <p class="a" data-i18n="faq.a5">High-yield American residential markets, selected for supply, demand and exit depth. The current market list is detailed in the investor presentation.</p>
+      </details>
+      <details>
+        <summary><span data-i18n="faq.q7">Do you work with funds and institutions?</span><span class="mark" aria-hidden="true">+</span></summary>
+        <p class="a" data-i18n="faq.a7">Yes, as counterparties and as partners. Assets are underwritten to institutional buy-box criteria from day one; portfolio pipeline and programmatic structures are discussed directly with the firm.</p>
       </details>
       <details>
         <summary><span data-i18n="faq.q6">How do I begin?</span><span class="mark" aria-hidden="true">+</span></summary>
@@ -658,13 +687,22 @@ dialog.drawer::backdrop{background:rgba(8,12,10,.62);backdrop-filter:blur(3px)}
           <input id="fPhone" name="phone" type="tel" autocomplete="tel">
         </div>
         <div class="field">
+          <label for="fProfile" data-i18n="form.profile">Investor profile</label>
+          <select id="fProfile" name="profile">
+            <option value="private" data-i18n="form.p1">Private investor</option>
+            <option value="family-office" data-i18n="form.p2">Family office</option>
+            <option value="institution" data-i18n="form.p3">Fund or institution</option>
+          </select>
+        </div>
+        <div class="field">
           <label for="fTicket" data-i18n="form.ticket">Indicative ticket range</label>
           <select id="fTicket" name="ticket">
             <option value="discuss" data-i18n="form.t0">Prefer to discuss</option>
             <option value="50-100">$50k to $100k</option>
             <option value="100-250">$100k to $250k</option>
             <option value="250-500">$250k to $500k</option>
-            <option value="500+" data-i18n="form.t4">$500k and above</option>
+            <option value="500-1m" data-i18n="form.t4">$500k to $1M</option>
+            <option value="1m+" data-i18n="form.t5">$1M and above</option>
           </select>
         </div>
         <label class="check" id="accWrap">
@@ -780,7 +818,22 @@ var I18N = {
     "form.phone": "Phone (optional)",
     "form.ticket": "Indicative ticket range",
     "form.t0": "Prefer to discuss",
-    "form.t4": "$500k and above",
+    "form.t4": "$500k to $1M",
+    "form.t5": "$1M and above",
+    "form.profile": "Investor profile",
+    "form.p1": "Private investor",
+    "form.p2": "Family office",
+    "form.p3": "Fund or institution",
+    "cap.kicker": "The capital",
+    "cap.title": "Who we work with",
+    "cap.c1t": "Private investors",
+    "cap.c1b": "Qualified individuals who co-invest deal by deal, with the full underwriting in hand. Tickets are sized to the deal, never to a fund.",
+    "cap.c2t": "Family offices",
+    "cap.c2b": "Patient capital that shares our register: alignment, discretion, long relationships. Side by side on income assets built to hold.",
+    "cap.c3t": "Funds & institutions",
+    "cap.c3b": "We underwrite to your buy-box from day one. Portfolio pipeline, forward commitments and programmatic partnerships are discussed directly.",
+    "faq.q7": "Do you work with funds and institutions?",
+    "faq.a7": "Yes, as counterparties and as partners. Assets are underwritten to institutional buy-box criteria from day one; portfolio pipeline and programmatic structures are discussed directly with the firm.",
     "form.acc": "I confirm I am an accredited or otherwise qualified investor and I request this information at my own initiative.",
     "form.nofin": "We do not collect financial details through this site.",
     "form.err": "Please complete the highlighted fields.",
@@ -865,7 +918,22 @@ var I18N = {
     "form.phone": "Téléphone (facultatif)",
     "form.ticket": "Fourchette de ticket indicative",
     "form.t0": "Je préfère en parler",
-    "form.t4": "$500k et plus",
+    "form.t4": "$500k à $1M",
+    "form.t5": "$1M et plus",
+    "form.profile": "Profil d'investisseur",
+    "form.p1": "Investisseur privé",
+    "form.p2": "Family office",
+    "form.p3": "Fonds ou institution",
+    "cap.kicker": "Le capital",
+    "cap.title": "Avec qui nous travaillons",
+    "cap.c1t": "Investisseurs privés",
+    "cap.c1b": "Des particuliers qualifiés qui co-investissent dossier par dossier, note de souscription en main. Les tickets se calibrent sur l'opération, jamais sur un fonds.",
+    "cap.c2t": "Family offices",
+    "cap.c2b": "Un capital patient qui partage notre registre : alignement, discrétion, relations longues. Côte à côte sur des actifs de rendement faits pour durer.",
+    "cap.c3t": "Fonds et institutions",
+    "cap.c3b": "Nous souscrivons selon vos critères d'acquisition dès le premier jour. Pipeline de portefeuilles, engagements à terme et partenariats programmatiques se discutent en direct.",
+    "faq.q7": "Travaillez-vous avec des fonds et des institutions ?",
+    "faq.a7": "Oui, comme contreparties et comme partenaires. Les actifs sont souscrits selon des critères institutionnels dès le premier jour ; pipeline de portefeuilles et structures programmatiques se discutent directement avec la maison.",
     "form.acc": "Je confirme être un investisseur accrédité ou autrement qualifié et demander ces informations de ma propre initiative.",
     "form.nofin": "Nous ne collectons aucune donnée financière via ce site.",
     "form.err": "Merci de compléter les champs signalés.",
@@ -1235,6 +1303,7 @@ if (params.get("consult") === "1") { window.addEventListener("load", function(){
       name: name.value.trim(),
       email: email.value.trim(),
       phone: phone.value.trim(),
+      profile: document.getElementById("fProfile").value,
       ticket_range: ticket.value,
       accredited_confirmed: "yes",
       language: lang,
@@ -1256,6 +1325,7 @@ if (params.get("consult") === "1") { window.addEventListener("load", function(){
       submitBtn.disabled = false;
       var body = "Name: " + payload.name + "\nEmail: " + payload.email +
         (payload.phone ? "\nPhone: " + payload.phone : "") +
+        "\nProfile: " + payload.profile +
         "\nTicket range: " + payload.ticket_range +
         "\nAccredited or qualified investor, at own initiative: yes\nLanguage: " + payload.language;
       var mailto = "mailto:" + CH.LEAD_EMAIL +
