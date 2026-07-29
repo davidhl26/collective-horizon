@@ -39,6 +39,21 @@ Semaines 6 a 8: dépôt du dossier par le cabinet.
 Ensuite: l'entretien consulaire selon les délais du poste (Paris souvent 1 a 2 mois,
 Casablanca 2 a 4). Pendant l'instruction, le chantier avance sous la direction du client.
 
+## Le financement des opérations (hard money)
+
+Les fonds propres du client (100 a 200k$) fondent le dossier E-2 et restent dans sa société.
+Le levier s'ajoute ensuite, par opération: un prêt court adossé au bien (achat plus travaux),
+qui permet deux a trois chantiers par an au lieu d'un.
+
+Phase 1, immédiate: prêteurs hard money partenaires établis, pré-négociés (taux, points, LTV).
+Phase 2, après validation écrite des avocats: la maison prête son propre capital deal par deal,
+a conditions de marché documentées. Questions a trancher avant: licence de prêteur en Floride
+(chapitre 494 et exemption business-purpose), plafonds d'usure, et clauses de transparence
+quand la maison est a la fois prêteur, prestataire et associée minoritaire.
+
+Règle d'or E-2: l'emprunt adossé aux actifs de la société ne compte pas comme capital investi
+du dossier. Le levier vient APRÈS l'engagement des fonds propres, jamais a leur place.
+
 ## Ce qui ne se compresse jamais
 
 Les délais consulaires, le KYC bancaire, le travail de l'avocat. On ne les cache pas
