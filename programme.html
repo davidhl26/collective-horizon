@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Le Programme. Votre société d'investissement immobilier aux États-Unis. Collective Horizon.</title>
+<meta name="description" content="Créez et dirigez votre propre société de rénovation résidentielle en Floride, accompagné de bout en bout par Collective Horizon.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0f1512">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0f1512;--ink-2:#131a16;--line:rgba(176,141,87,.22);--line-soft:rgba(240,233,220,.09);
+  --brass:#b08d57;--brass-hi:#d3b184;--cream:#f0e9dc;--cream-dim:rgba(240,233,220,.72);--cream-faint:rgba(240,233,220,.5);
+  --serif-d:"Fraunces",Georgia,serif;--serif-b:"Newsreader",Georgia,serif;--sans:"Libre Franklin",system-ui,sans-serif;
+  --pad:clamp(1.25rem,4vw,4rem);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--cream);font-family:var(--serif-b);font-size:clamp(1.02rem,1.35vw,1.18rem);line-height:1.7;-webkit-font-smoothing:antialiased}
+section{overflow:visible;overflow:clip}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+.kicker{font-family:var(--sans);font-size:clamp(.78rem,.95vw,.86rem);font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--brass)}
+.cta{font-family:var(--sans);font-size:.74rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);background:var(--brass);padding:.9rem 1.5rem;border-radius:2px;display:inline-block}
+.cta:hover{background:var(--brass-hi)}
+header{position:fixed;top:0;inset-inline:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:1rem var(--pad);background:rgba(15,21,18,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-soft)}
+.brand{display:flex;align-items:center;gap:.7rem}
+.brand svg{width:32px;height:32px}
+.brand b{font-family:var(--serif-d);font-weight:500;font-size:.9rem;letter-spacing:.24em}
+.hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;background:url('assets/posters/craft.webp') center/cover}
+.hero .tint{position:absolute;inset:0;background:linear-gradient(rgba(15,21,18,.82),rgba(15,21,18,.6) 50%,var(--ink))}
+.hero .inner{position:relative;max-width:900px;padding:9rem var(--pad) 5rem}
+.hero h1{font-family:var(--serif-d);font-weight:300;font-size:clamp(2rem,5vw,3.8rem);line-height:1.2;margin:1.4rem 0 1.2rem}
+.hero p.sub{font-style:italic;color:var(--cream-dim);max-width:38em;margin:0 auto 2.4rem}
+.wrap{max-width:1100px;margin:0 auto;padding:5.5rem var(--pad)}
+h2{font-family:var(--serif-d);font-weight:300;font-size:clamp(1.7rem,3.4vw,2.6rem);margin:.9rem 0 1.4rem}
+.lead{color:var(--cream-dim);max-width:44em}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2.5rem;margin-top:3rem}
+.tile{border-top:1px solid var(--line);padding-top:1.3rem}
+.tile .n{font-family:var(--serif-d);font-size:2rem;font-weight:300;color:var(--brass)}
+.tile h3{font-family:var(--serif-d);font-weight:400;font-size:1.25rem;margin:.7rem 0 .5rem}
+.tile p{color:var(--cream-dim);font-size:1rem;line-height:1.7}
+.band{border-block:1px solid var(--line-soft);background:var(--ink-2)}
+.fact{border-inline-start:2px solid var(--brass);padding:.9rem 1.2rem;background:rgba(176,141,87,.06);margin-top:2rem;max-width:44em}
+.fact p{font-size:.95rem;color:var(--cream-dim)}
+.note{font-size:.82rem;font-style:italic;color:var(--cream-faint);max-width:50em}
+form{max-width:560px;margin-top:2.5rem;display:flex;flex-direction:column;gap:1.2rem}
+.field{display:flex;flex-direction:column;gap:.45rem}
+.field label{font-family:var(--sans);font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--cream-dim)}
+.field input,.field select,.field textarea{font:inherit;font-size:1rem;color:var(--cream);background:var(--ink);border:1px solid var(--line-soft);border-radius:2px;padding:.85rem .9rem;outline:none;width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--brass)}
+.field [aria-invalid="true"]{border-color:#b05757}
+.check{display:flex;gap:.8rem;align-items:flex-start;font-size:.88rem;line-height:1.6;color:var(--cream-dim)}
+.check input{margin-top:.3rem;accent-color:var(--brass);width:16px;height:16px;flex:none}
+.check.invalid{color:#c98080}
+.form-error{display:none;color:#c98080;font-size:.9rem}
+.form-error.show{display:block}
+.form-success{display:none;font-family:var(--serif-d);font-size:1.15rem;color:var(--brass-hi)}
+.form-success.show{display:block}
+footer{border-top:1px solid var(--line-soft);padding:3.5rem var(--pad);background:var(--ink-2)}
+footer .inner{max-width:1100px;margin:0 auto}
+.disclaimer{font-size:.82rem;line-height:1.8;color:var(--cream-faint);font-style:italic;max-width:76em}
+footer .links{margin-top:1.6rem;font-family:var(--sans);font-size:.72rem;color:var(--cream-faint);display:flex;gap:1.6rem;flex-wrap:wrap}
+footer .links a:hover{color:var(--brass-hi)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+details{border-top:1px solid var(--line-soft);max-width:820px}
+details:last-of-type{border-bottom:1px solid var(--line-soft)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:2rem;padding:1.3rem .2rem;font-family:var(--serif-d);font-size:1.1rem}
+summary::-webkit-details-marker{display:none}
+summary .mark{color:var(--brass);transition:transform .3s}
+details[open] summary .mark{transform:rotate(45deg)}
+details .a{padding:0 .2rem 1.5rem;color:var(--cream-dim);max-width:44em}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">
+    <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+      <rect x="2" y="2" width="60" height="60" rx="6" stroke="#b08d57" stroke-width="1.6"/>
+      <text x="32" y="41" text-anchor="middle" font-family="Georgia,serif" font-size="24" fill="#f0e9dc">CH</text>
+    </svg>
+    <b>COLLECTIVE&nbsp;HORIZON</b>
+  </a>
+  <a class="cta" href="#candidature">Candidater au Programme</a>
+</header>
+
+<section class="hero">
+  <div class="tint"></div>
+  <div class="inner">
+    <p class="kicker">Le Programme &middot; Floride</p>
+    <h1>Votre société d'investissement immobilier aux États-Unis. Dirigée par vous, opérée avec nous.</h1>
+    <p class="sub">Vous créez et dirigez votre propre société de rénovation résidentielle en Floride. Collective Horizon met à votre service sa méthode, son sourcing et son réseau de chantier, à chaque étape.</p>
+    <a class="cta" href="#candidature">Candidater au Programme</a>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">Le principe</p>
+    <h2>Votre entreprise. Notre méthode.</h2>
+    <p class="lead">Le Programme s'adresse aux entrepreneurs francophones qui veulent bâtir une activité réelle aux États-Unis : acheter des maisons décotées, les restaurer avec des artisans locaux, les revendre. Vous êtes propriétaire majoritaire et dirigeant de votre société. Nous vous apportons ce qui prend des années à construire seul : les biens, les chiffres, les artisans, la discipline.</p>
+    <div class="fact">
+      <p>Une entreprise réelle que vous dirigez peut, selon votre situation, fonder une demande de visa d'entrepreneur E-2, qui couvre le conjoint (avec autorisation de travail) et les enfants de moins de 21 ans. L'éligibilité est évaluée et le dossier préparé exclusivement par un cabinet d'immigration indépendant que vous mandatez. Aucun visa n'est jamais promis : la décision appartient aux autorités américaines.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="kicker">Le parcours</p>
+    <h2>Cinq étapes, un seul interlocuteur</h2>
+    <div class="grid3">
+      <div class="tile"><span class="n">01</span><h3>Le diagnostic</h3><p>Un entretien sur votre projet, votre capital et votre horizon. Nous vous disons franchement si le Programme est fait pour vous, et sinon, pourquoi.</p></div>
+      <div class="tile"><span class="n">02</span><h3>Votre société</h3><p>Création de votre LLC en Floride avec vos conseils, ouverture des comptes, engagement de votre capital dans votre entreprise.</p></div>
+      <div class="tile"><span class="n">03</span><h3>Votre dossier</h3><p>Le cabinet d'immigration que vous mandatez évalue votre éligibilité et prépare votre demande, business plan à l'appui. Nous fournissons la matière opérationnelle, jamais le conseil juridique.</p></div>
+      <div class="tile"><span class="n">04</span><h3>Votre premier chantier</h3><p>Sourcing du bien, note de souscription complète avec ses risques écrits, budget, artisans licenciés, pilotage hebdomadaire. Vous décidez, nous exécutons à vos côtés.</p></div>
+      <div class="tile"><span class="n">05</span><h3>Le rythme de croisière</h3><p>Deux à trois opérations par an, un reporting régulier, et si vous le souhaitez, Collective Horizon peut s'associer en minoritaire à votre société, en y investissant son propre capital.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">Questions directes</p>
+    <h2>Ce que vous devez savoir</h2>
+    <details>
+      <summary><span>Le visa est-il inclus dans le Programme ?</span><span class="mark">+</span></summary>
+      <p class="a">Non, et méfiez-vous de quiconque vous le vendrait. Le Programme construit une entreprise réelle que vous dirigez. Si votre situation le permet, cette entreprise peut fonder une demande E-2, préparée par un cabinet d'immigration indépendant que vous mandatez directement. Nous n'intervenons jamais dans le conseil juridique et aucun résultat n'est promis.</p>
+    </details>
+    <details>
+      <summary><span>Combien faut-il investir ?</span><span class="mark">+</span></summary>
+      <p class="a">Votre capital reste dans votre société : comptez de 100 000 à 200 000 $ selon l'ambition, engagés dans vos propres opérations. S'y ajoutent le droit d'entrée du Programme et les honoraires juridiques de vos conseils, détaillés lors du diagnostic.</p>
+    </details>
+    <details>
+      <summary><span>Quels revenus puis-je en attendre ?</span><span class="mark">+</span></summary>
+      <p class="a">Ceux de votre entreprise, qui dépendent du marché, des chantiers et de vos décisions. Chaque opération part d'une note de souscription avec ses chiffres cibles et ses risques écrits. Nous ne promettons aucun résultat, à personne, jamais.</p>
+    </details>
+    <details>
+      <summary><span>Qui fait le travail au quotidien ?</span><span class="mark">+</span></summary>
+      <p class="a">Vous dirigez : achats, budgets et décisions vous appartiennent. Nous instruisons et exécutons à vos côtés : sourcing, analyse, coordination des artisans licenciés, revente. C'est votre entreprise, avec une méthode éprouvée autour.</p>
+    </details>
+    <details>
+      <summary><span>Et ma famille ?</span><span class="mark">+</span></summary>
+      <p class="a">Le statut E-2, lorsqu'il est accordé, couvre le conjoint et les enfants de moins de 21 ans ; le conjoint peut demander une autorisation de travail. Ce sont des règles publiques du droit américain, que votre avocat d'immigration vous confirmera pour votre cas précis.</p>
+    </details>
+  </div>
+</section>
+
+<section class="band" id="candidature">
+  <div class="wrap">
+    <p class="kicker">Candidature</p>
+    <h2>Un entretien d'abord.</h2>
+    <p class="lead">Le Programme est limité à une petite cohorte par an. Nous répondons sous un jour ouvré.</p>
+    <form id="progForm" novalidate>
+      <input type="text" name="_honey" style="display:none" tabindex="-1" aria-hidden="true">
+      <div class="field"><label for="pName">Nom complet</label><input id="pName" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="pEmail">Email</label><input id="pEmail" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="pPhone">Téléphone / WhatsApp (facultatif)</label><input id="pPhone" type="tel" autocomplete="tel"></div>
+      <div class="field"><label for="pNat">Nationalité</label><input id="pNat" type="text"></div>
+      <div class="field"><label for="pCap">Capital envisagé pour votre société</label>
+        <select id="pCap">
+          <option value="discuss">Je préfère en parler</option>
+          <option value="100-150">$100k à $150k</option>
+          <option value="150-250">$150k à $250k</option>
+          <option value="250+">$250k et plus</option>
+        </select>
+      </div>
+      <div class="field"><label for="pMsg">Votre projet en quelques lignes (facultatif)</label><textarea id="pMsg" rows="3"></textarea></div>
+      <label class="check" id="pConsentWrap">
+        <input id="pConsent" type="checkbox" required>
+        <span>Je comprends que le Programme est une prestation d'accompagnement : aucun visa n'est promis, l'éligibilité étant évaluée par un cabinet d'immigration indépendant, et aucun résultat financier n'est promis.</span>
+      </label>
+      <p class="form-error" id="pError" role="alert">Merci de compléter les champs signalés.</p>
+      <button type="submit" class="cta" id="pSubmit">Envoyer ma candidature</button>
+      <p class="form-success" id="pSuccess" role="status">Merci. Votre candidature a bien été reçue.</p>
+      <p class="note">Nous ne collectons aucune donnée financière via ce site.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="inner">
+    <p class="disclaimer">Le Programme est une offre de services professionnels de Collective Horizon : accompagnement à la création et à l'exploitation d'une société de rénovation résidentielle détenue et dirigée par le client. Rien sur cette page ne constitue un conseil juridique, fiscal ou d'immigration, ni une offre de titres financiers, ni une promesse de visa ou de résultat. Les questions d'immigration relèvent exclusivement d'un cabinet indépendant mandaté par le client. Toute activité d'investissement du family office est distincte du Programme et réservée aux investisseurs qualifiés, au travers de documents d'offre définitifs. Tout investissement comporte des risques, y compris la perte du capital.</p>
+    <div class="links">
+      <a href="index.html">Collective Horizon</a>
+      <a href="privacy.html">Confidentialité</a>
+      <a href="terms.html">Conditions</a>
+      <span>&copy; 2026 Collective Horizon</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+"use strict";
+var LEAD_EMAIL = "davidhazout@gmail.com";
+(function(){
+  var form = document.getElementById("progForm");
+  var err = document.getElementById("pError");
+  var okL = document.getElementById("pSuccess");
+  var btn = document.getElementById("pSubmit");
+  function inv(el, bad){ if (bad) el.setAttribute("aria-invalid", "true"); else el.removeAttribute("aria-invalid"); }
+  function done(){ okL.classList.add("show"); err.classList.remove("show"); btn.disabled = true; btn.style.opacity = ".5"; }
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var name = document.getElementById("pName");
+    var email = document.getElementById("pEmail");
+    var consent = document.getElementById("pConsent");
+    var wrap = document.getElementById("pConsentWrap");
+    var bad = false;
+    var okName = name.value.trim().length > 1;
+    var okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim());
+    inv(name, !okName); if (!okName) bad = true;
+    inv(email, !okEmail); if (!okEmail) bad = true;
+    if (!consent.checked) { wrap.classList.add("invalid"); bad = true; } else wrap.classList.remove("invalid");
+    if (bad) { err.classList.add("show"); return; }
+    var payload = {
+      name: name.value.trim(),
+      email: email.value.trim(),
+      phone: document.getElementById("pPhone").value.trim(),
+      nationality: document.getElementById("pNat").value.trim(),
+      capital_range: document.getElementById("pCap").value,
+      message: document.getElementById("pMsg").value.trim(),
+      consent_no_promise: "yes",
+      _subject: "Collective Horizon: candidature au Programme"
+    };
+    if (window.__leadHook) { try { window.__leadHook(payload); } catch (x) {} done(); return; }
+    btn.disabled = true;
+    fetch("https://formsubmit.co/ajax/" + LEAD_EMAIL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify(payload)
+    }).then(function(r){ if (!r.ok) throw new Error("http"); return r.json(); })
+      .then(done)
+      .catch(function(){
+        btn.disabled = false;
+        var body = "Nom: " + payload.name + "\nEmail: " + payload.email +
+          (payload.phone ? "\nTel: " + payload.phone : "") +
+          (payload.nationality ? "\nNationalite: " + payload.nationality : "") +
+          "\nCapital: " + payload.capital_range +
+          (payload.message ? "\nProjet: " + payload.message : "");
+        var mailto = "mailto:" + LEAD_EMAIL + "?subject=" + encodeURIComponent(payload._subject) + "&body=" + encodeURIComponent(body);
+        if (window.__mailtoHook) { try { window.__mailtoHook(mailto); } catch (x) {} done(); return; }
+        location.href = mailto;
+        done();
+      });
+  });
+})();
+</script>
+</body>
+</html>
