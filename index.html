@@ -182,6 +182,9 @@ body.ready h1.display .ch{opacity:1;transform:translateY(0)}
   color:var(--cream-dim);opacity:0;transition:opacity 1.4s ease 1.2s;
 }
 body.ready .hero-sub{opacity:1}
+.hero-cta{margin-top:2.3rem;opacity:0;transition:opacity 1.3s ease 1.7s}
+body.ready .hero-cta{opacity:1}
+.hero-note{margin-top:.85rem;font-size:.8rem;font-style:italic;color:var(--cream-faint)}
 .hero-cue{
   position:absolute;bottom:2.2rem;inset-inline:0;z-index:2;
   display:flex;flex-direction:column;align-items:center;gap:.7rem;
@@ -242,6 +245,7 @@ body.ready .hero-cue{opacity:1}
 .how{padding:9rem var(--pad);border-top:1px solid var(--line-soft)}
 .how .head{max-width:1200px;margin:0 auto 4.5rem}
 .how h2{font-family:var(--serif-d);font-weight:300;font-size:var(--fs-h2);margin-top:1.1rem}
+.how-lead{margin-top:1rem;font-style:italic;color:var(--cream-dim);font-size:clamp(1.05rem,1.6vw,1.3rem)}
 .steps{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:3rem 2.5rem}
 .step{border-top:1px solid var(--line);padding-top:1.6rem}
 .step .n{font-family:var(--serif-d);font-size:2.4rem;font-weight:300;color:var(--brass);font-variant-numeric:tabular-nums}
@@ -330,6 +334,8 @@ dialog.drawer::backdrop{background:rgba(8,12,10,.62);backdrop-filter:blur(3px)}
 .form-error.show{display:block}
 .form-success{display:none;font-family:var(--serif-d);font-size:1.15rem;color:var(--brass-hi);line-height:1.6}
 .form-success.show{display:block}
+.drawer-alt{text-align:center;font-size:.85rem}
+.drawer-alt a{color:var(--brass-hi);border-bottom:1px solid var(--line)}
 .drawer-cal{display:none;text-align:center;font-size:.9rem}
 .drawer-cal.on{display:block}
 .drawer-cal a{color:var(--brass-hi);border-bottom:1px solid var(--line)}
@@ -426,6 +432,10 @@ dialog.drawer::backdrop{background:rgba(8,12,10,.62);backdrop-filter:blur(3px)}
         <p class="kicker" data-i18n="hero.kicker">A private family office, Miami</p>
         <h1 class="display" id="heroTitle" aria-label="Collective Horizon"></h1>
         <p class="hero-sub" data-i18n="hero.sub">A family office for American residential real assets.</p>
+        <div class="hero-cta">
+          <button class="cta js-open-drawer" data-i18n="cta.main">Request the Investor Presentation</button>
+          <p class="hero-note" data-i18n="hero.note">A twenty minute conversation first. We respond within one business day.</p>
+        </div>
       </div>
       <div class="hero-cue" aria-hidden="true"><span data-i18n="hero.cue">Scroll</span><span class="cue-line"></span></div>
     </div>
@@ -514,6 +524,7 @@ dialog.drawer::backdrop{background:rgba(8,12,10,.62);backdrop-filter:blur(3px)}
     <div class="head reveal">
       <p class="kicker" data-i18n="how.kicker">The process</p>
       <h2 data-i18n="how.title">How co-investing works</h2>
+      <p class="how-lead" data-i18n="how.lead">A call. A memo on a live deal. Your decision, documents in hand.</p>
     </div>
     <div class="steps">
       <div class="step reveal">
@@ -713,6 +724,7 @@ dialog.drawer::backdrop{background:rgba(8,12,10,.62);backdrop-filter:blur(3px)}
         <p class="form-error" id="formError" role="alert" data-i18n="form.err">Please complete the highlighted fields.</p>
         <button type="submit" class="cta" id="formSubmit" data-i18n="form.send">Send the request</button>
         <p class="form-success" id="formSuccess" role="status" data-i18n="form.ok">Thank you. Your request has been received.</p>
+        <p class="drawer-alt"><a href="https://wa.me/13057732177" target="_blank" rel="noopener" data-i18n="form.wa">Or write to us on WhatsApp</a></p>
       </div>
     </form>
     <p class="drawer-cal" id="drawerCal"><a href="#" target="_blank" rel="noopener" data-i18n="cta.call">Schedule an introductory call</a></p>
@@ -749,6 +761,9 @@ var I18N = {
     "hero.kicker": "A private family office, Miami",
     "hero.sub": "A family office for American residential real assets.",
     "hero.cue": "Scroll",
+    "hero.note": "A twenty minute conversation first. We respond within one business day.",
+    "how.lead": "A call. A memo on a live deal. Your decision, documents in hand.",
+    "form.wa": "Or write to us on WhatsApp",
     "intro.kicker": "The firm",
     "intro.line": "America is short of homes. Institutions are short of product. We acquire and restore residential assets in high-yield American markets, <em>underwritten from day one</em> to the exact criteria those institutions buy against.",
     "rec.kicker": "The standards",
@@ -849,6 +864,9 @@ var I18N = {
     "hero.kicker": "Un family office privé, Miami",
     "hero.sub": "Un family office pour l'immobilier résidentiel américain.",
     "hero.cue": "Faites défiler",
+    "hero.note": "Vingt minutes de conversation d'abord. Réponse sous un jour ouvré.",
+    "how.lead": "Un appel. Une note sur un deal réel. Votre décision, documents en main.",
+    "form.wa": "Ou écrivez-nous sur WhatsApp",
     "intro.kicker": "La maison",
     "intro.line": "L'Amérique manque de logements. Les institutions manquent de produit. Nous acquérons et restaurons des actifs résidentiels sur des marchés américains à fort rendement, <em>souscrits dès le premier jour</em> selon les critères exacts auxquels ces institutions achètent.",
     "rec.kicker": "Les exigences",
