@@ -278,6 +278,16 @@ body.ready .hero-cue{opacity:1}
 .faq-list details[open] summary .mark{transform:rotate(45deg)}
 .faq-list .a{padding:0 .2rem 1.8rem;color:var(--cream-dim);line-height:1.8;max-width:44em}
 
+/* ---------- Two doors ---------- */
+.doors{padding:8rem var(--pad);border-top:1px solid var(--line-soft)}
+.doors .head{max-width:1200px;margin:0 auto 3.5rem}
+.doors h2{font-family:var(--serif-d);font-weight:300;font-size:var(--fs-h2);margin-top:1.1rem}
+.door-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:2.2rem}
+.door{border:1px solid var(--line-soft);background:var(--ink-2);padding:2.6rem;display:flex;flex-direction:column;align-items:flex-start;gap:1.1rem}
+.door h3{font-family:var(--serif-d);font-weight:400;font-size:clamp(1.4rem,2.4vw,1.9rem)}
+.door p{color:var(--cream-dim);flex:1;max-width:34em}
+@media (max-width:960px){.door-grid{grid-template-columns:1fr}}
+
 /* ---------- Final CTA ---------- */
 .finale{padding:11rem var(--pad);text-align:center;position:relative;border-top:1px solid var(--line-soft)}
 .finale h2{font-family:var(--serif-d);font-weight:300;font-size:clamp(2rem,5vw,4rem);margin-bottom:1.4rem}
@@ -628,6 +638,26 @@ dialog.drawer::backdrop{background:rgba(8,12,10,.62);backdrop-filter:blur(3px)}
     </div>
   </section>
 
+  <!-- TWO DOORS -->
+  <section class="doors" id="doors">
+    <div class="head reveal">
+      <p class="kicker" data-i18n="doors.kicker">Two doors</p>
+      <h2 data-i18n="doors.title">Two ways to work with us</h2>
+    </div>
+    <div class="door-grid">
+      <div class="door reveal">
+        <h3 data-i18n="doors.d1t">Invest alongside us</h3>
+        <p data-i18n="doors.d1b">Qualified investors co-invest deal by deal in our acquisitions, with the full underwriting in hand and definitive documents at the end.</p>
+        <button class="cta js-open-drawer" data-i18n="cta.main">Request the Investor Presentation</button>
+      </div>
+      <div class="door reveal">
+        <h3 data-i18n="doors.d2t">Build your own US company</h3>
+        <p data-i18n="doors.d2b">Entrepreneurs create and direct their own renovation company in Florida, operated with our method at every step: the Program.</p>
+        <a class="cta ghost" href="programme.html" data-i18n="doors.d2c">Discover the Program</a>
+      </div>
+    </div>
+  </section>
+
   <!-- FINAL CTA -->
   <section class="finale" id="contact">
     <h2 class="reveal" data-i18n="fin.title">A conversation first.</h2>
@@ -635,6 +665,7 @@ dialog.drawer::backdrop{background:rgba(8,12,10,.62);backdrop-filter:blur(3px)}
     <div class="row reveal">
       <button class="cta js-open-drawer" data-i18n="cta.main">Request the Investor Presentation</button>
       <a id="calBtn" class="cta ghost" href="#" target="_blank" rel="noopener" hidden data-i18n="cta.call">Schedule an introductory call</a>
+      <a class="cta ghost" href="https://wa.me/13057732177" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </section>
 </main>
@@ -817,6 +848,13 @@ var I18N = {
     "faq.a5": "High-yield American residential markets, selected for supply, demand and exit depth. The current market list is detailed in the investor presentation.",
     "faq.q6": "How do I begin?",
     "faq.a6": "Request the investor presentation below. We respond within one business day.",
+    "doors.kicker": "Two doors",
+    "doors.title": "Two ways to work with us",
+    "doors.d1t": "Invest alongside us",
+    "doors.d1b": "Qualified investors co-invest deal by deal in our acquisitions, with the full underwriting in hand and definitive documents at the end.",
+    "doors.d2t": "Build your own US company",
+    "doors.d2b": "Entrepreneurs create and direct their own renovation company in Florida, operated with our method at every step: the Program.",
+    "doors.d2c": "Discover the Program",
     "fin.title": "A conversation first.",
     "fin.sub": "The discipline shows in the first memo you read. Request the investor presentation; we respond within one business day.",
     "foot.loc": "Miami, Florida",
@@ -920,6 +958,13 @@ var I18N = {
     "faq.a5": "Des marchés résidentiels américains à fort rendement, choisis pour leur offre, leur demande et la profondeur de leurs sorties. La liste des marchés figure dans la présentation investisseurs.",
     "faq.q6": "Par où commencer ?",
     "faq.a6": "Demandez la présentation investisseurs ci-dessous. Nous répondons sous un jour ouvré.",
+    "doors.kicker": "Deux portes",
+    "doors.title": "Deux façons de travailler avec nous",
+    "doors.d1t": "Investir à nos côtés",
+    "doors.d1b": "Les investisseurs qualifiés co-investissent dossier par dossier dans nos acquisitions, note de souscription en main et documents définitifs à la clé.",
+    "doors.d2t": "Créer votre société aux États-Unis",
+    "doors.d2b": "Les entrepreneurs créent et dirigent leur propre société de rénovation en Floride, opérée avec notre méthode à chaque étape : le Programme.",
+    "doors.d2c": "Découvrir le Programme",
     "fin.title": "Une conversation, d'abord.",
     "fin.sub": "La discipline se lit dès la première note. Demandez la présentation investisseurs ; nous répondons sous un jour ouvré.",
     "foot.loc": "Miami, Floride",
