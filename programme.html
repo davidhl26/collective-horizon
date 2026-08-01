@@ -7,14 +7,14 @@
 <title>Le Programme. Votre société d'investissement immobilier aux États-Unis. Collective Horizon.</title>
 <meta name="description" content="Créez et dirigez votre propre société de rénovation résidentielle en Floride, accompagné de bout en bout par Collective Horizon.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#0f1512">
+<meta name="theme-color" content="#f7f1e6">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0f1512;--ink-2:#131a16;--line:rgba(176,141,87,.22);--line-soft:rgba(240,233,220,.09);
-  --brass:#b08d57;--brass-hi:#d3b184;--cream:#f0e9dc;--cream-dim:rgba(240,233,220,.72);--cream-faint:rgba(240,233,220,.5);
+  --ink:#f7f1e6;--ink-2:#fffaf0;--line:rgba(138,109,63,.32);--line-soft:rgba(26,34,28,.13);
+  --brass:#8a6d3f;--brass-hi:#6d5430;--cream:#1a221c;--cream-dim:rgba(26,34,28,.76);--cream-faint:rgba(26,34,28,.55);
   --serif-d:"Fraunces",Georgia,serif;--serif-b:"Newsreader",Georgia,serif;--sans:"Libre Franklin",system-ui,sans-serif;
   --pad:clamp(1.25rem,4vw,4rem);
 }
@@ -26,15 +26,17 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .kicker{font-family:var(--sans);font-size:clamp(.78rem,.95vw,.86rem);font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--brass)}
 .cta{font-family:var(--sans);font-size:.74rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);background:var(--brass);padding:.9rem 1.5rem;border-radius:2px;display:inline-block}
 .cta:hover{background:var(--brass-hi)}
-header{position:fixed;top:0;inset-inline:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:1rem var(--pad);background:rgba(15,21,18,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-soft)}
+header{position:fixed;top:0;inset-inline:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:1rem var(--pad);background:rgba(247,241,230,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-soft)}
 .brand{display:flex;align-items:center;gap:.7rem}
 .brand svg{width:32px;height:32px}
 .brand b{font-family:var(--serif-d);font-weight:500;font-size:.9rem;letter-spacing:.24em}
 .hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;background:url('assets/posters/craft.webp') center/cover}
 .hero .tint{position:absolute;inset:0;background:linear-gradient(rgba(15,21,18,.82),rgba(15,21,18,.6) 50%,var(--ink))}
-.hero .inner{position:relative;max-width:900px;padding:9rem var(--pad) 5rem}
+.hero .inner{position:relative;max-width:900px;padding:9rem var(--pad) 5rem;color:#f0e9dc}
+.hero .inner .kicker{color:#d3b184}
+.hero p.sub{color:rgba(240,233,220,.78)}
 .hero h1{font-family:var(--serif-d);font-weight:300;font-size:clamp(2rem,5vw,3.8rem);line-height:1.2;margin:1.4rem 0 1.2rem}
-.hero p.sub{font-style:italic;color:var(--cream-dim);max-width:38em;margin:0 auto 2.4rem}
+.hero p.sub{font-style:italic;max-width:38em;margin:0 auto 2.4rem}
 .wrap{max-width:1100px;margin:0 auto;padding:5.5rem var(--pad)}
 h2{font-family:var(--serif-d);font-weight:300;font-size:clamp(1.7rem,3.4vw,2.6rem);margin:.9rem 0 1.4rem}
 .lead{color:var(--cream-dim);max-width:44em}
@@ -80,8 +82,8 @@ details .a{padding:0 .2rem 1.5rem;color:var(--cream-dim);max-width:44em}
 <header>
   <a class="brand" href="index.html">
     <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-      <rect x="2" y="2" width="60" height="60" rx="6" stroke="#b08d57" stroke-width="1.6"/>
-      <text x="32" y="41" text-anchor="middle" font-family="Georgia,serif" font-size="24" fill="#f0e9dc">CH</text>
+      <rect x="2" y="2" width="60" height="60" rx="6" stroke="#8a6d3f" stroke-width="1.6"/>
+      <text x="32" y="41" text-anchor="middle" font-family="Georgia,serif" font-size="24" fill="#1a221c">CH</text>
     </svg>
     <b>COLLECTIVE&nbsp;HORIZON</b>
   </a>
@@ -99,8 +101,8 @@ details .a{padding:0 .2rem 1.5rem;color:var(--cream-dim);max-width:44em}
   <div class="tint"></div>
   <div class="inner">
     <p class="kicker">Le Programme &middot; Floride</p>
-    <h1>Votre société d'investissement immobilier aux États-Unis. Dirigée par vous, opérée avec nous.</h1>
-    <p class="sub">Vous créez et dirigez votre propre société de rénovation résidentielle en Floride. Collective Horizon met à votre service sa méthode, son sourcing et son réseau de chantier, à chaque étape.</p>
+    <h1>Votre société immobilière en Floride. Vous dirigez. Nous faisons avec vous.</h1>
+    <p class="sub">Vous achetez une maison sous sa valeur. Nous la rénovons avec vous. Vous la revendez. C'est votre entreprise ; notre méthode, nos chiffres et nos artisans vous accompagnent à chaque étape.</p>
     <a class="cta" href="#candidature">Candidater au Programme</a>
   </div>
 </section>
@@ -109,7 +111,7 @@ details .a{padding:0 .2rem 1.5rem;color:var(--cream-dim);max-width:44em}
   <div class="wrap">
     <p class="kicker">Le principe</p>
     <h2>Votre entreprise. Notre méthode.</h2>
-    <p class="lead">Le Programme s'adresse aux entrepreneurs francophones qui veulent bâtir une activité réelle aux États-Unis : acheter des maisons décotées, les restaurer avec des artisans locaux, les revendre. Vous êtes propriétaire majoritaire et dirigeant de votre société. Nous vous apportons ce qui prend des années à construire seul : les biens, les chiffres, les artisans, la discipline.</p>
+    <p class="lead">Le Programme est fait pour ceux qui veulent une activité réelle aux États-Unis sans y avoir déjà un réseau. Vous êtes propriétaire et décideur. Nous apportons ce qui prend des années à construire seul : les maisons, les chiffres, les artisans, la méthode.</p>
     <div class="fact">
       <p>Une entreprise réelle que vous dirigez peut, selon votre situation, fonder une demande de visa d'entrepreneur E-2, qui couvre le conjoint (avec autorisation de travail) et les enfants de moins de 21 ans. L'éligibilité est évaluée et le dossier préparé exclusivement par un cabinet d'immigration indépendant que vous mandatez. Aucun visa n'est jamais promis : la décision appartient aux autorités américaines.</p>
     </div>
