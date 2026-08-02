@@ -39,6 +39,25 @@ Semaines 6 a 8: dépôt du dossier par le cabinet.
 Ensuite: l'entretien consulaire selon les délais du poste (Paris souvent 1 a 2 mois,
 Casablanca 2 a 4). Pendant l'instruction, le chantier avance sous la direction du client.
 
+## L'emploi direct, le point qui sécurise le visa
+
+Validé avec l'avocate: un dossier E-2 fondé uniquement sur des contractors (1099) est
+aléatoire. Le business plan STANDARD du Programme intègre donc de l'emploi direct:
+
+1. Une première embauche W-2 prévue entre le mois 6 et le mois 12 (coordinateur de
+   chantier ou assistant d'exploitation, 35 a 55k$/an en Floride), une seconde en année 2.
+2. Chaque société de client a SES propres salariés. Un employé partagé entre les
+   sociétés (porté par la maison) ne compte pas comme emploi direct du client.
+3. Le mix d'activité renforce l'emploi: une société qui combine flip et exploitation
+   locative gérée (courte durée, meublé) emploie naturellement du personnel récurrent.
+   Proposer ce mix aux clients dont le dossier a besoin d'être solide.
+4. Conséquence sur le ticket: en dessous de ~150k$ de capital, difficile de financer
+   une embauche crédible; relever le plancher du Programme plutôt que de vendre des
+   dossiers fragiles. Les clients qui refusent toute embauche restent des clients
+   "business seulement", sans angle visa, ou passent par d'autres voies (L-1A, EB-5).
+
+Chaque hypothèse ci-dessus est a calibrer par l'avocate, dossier par dossier.
+
 ## Le financement des opérations (hard money)
 
 Les fonds propres du client (100 a 200k$) fondent le dossier E-2 et restent dans sa société.
