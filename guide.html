@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Le guide de souscription. Collective Horizon.</title>
+<meta name="description" content="Comment un family office de Miami analyse une maison avant de l'acheter. Guide de 12 pages.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0f1512">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0f1512;--ink-2:#131a16;--paper:#f7f1e6;--paper-2:#fffaf0;
+  --brass:#b08d57;--brass-hi:#d3b184;--brass-d:#8a6d3f;
+  --cream:#f0e9dc;--cream-dim:rgba(240,233,220,.74);
+  --dark:#1a221c;--dark-dim:rgba(26,34,28,.76);--dark-faint:rgba(26,34,28,.55);
+  --line-d:rgba(26,34,28,.14);
+  --serif-d:"Fraunces",Georgia,serif;--serif-b:"Newsreader",Georgia,serif;--sans:"Libre Franklin",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--dark);font-family:var(--serif-b);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+.wrap{min-height:100vh;display:grid;grid-template-columns:1fr 1fr}
+
+/* Left visual panel */
+.visual{position:relative;background:var(--ink) url('assets/hero-still.webp') center/cover;display:flex;flex-direction:column;justify-content:space-between;padding:2.5rem 2.8rem;color:var(--cream)}
+.visual .veil{position:absolute;inset:0;background:linear-gradient(160deg,rgba(15,21,18,.86),rgba(15,21,18,.62) 45%,rgba(15,21,18,.9))}
+.visual > *{position:relative;z-index:2}
+.brand{display:flex;align-items:center;gap:.7rem}
+.brand svg{width:34px;height:34px}
+.brand b{font-family:var(--serif-d);font-weight:500;font-size:.82rem;letter-spacing:.24em}
+.visual .pitch{max-width:20em}
+.visual .pitch p{font-family:var(--serif-d);font-weight:300;font-size:clamp(1.4rem,2.2vw,2rem);line-height:1.35;color:var(--cream)}
+.visual .who{font-size:.85rem;color:var(--cream-dim);line-height:1.7}
+.visual .who b{display:block;font-family:var(--sans);font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-hi);margin-bottom:.4rem}
+
+/* Right form panel */
+.panel{display:flex;align-items:center;justify-content:center;padding:3rem 2.6rem;background:var(--paper)}
+.inner{width:100%;max-width:440px}
+.kicker{font-family:var(--sans);font-size:.7rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--brass-d)}
+h1{font-family:var(--serif-d);font-weight:400;font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.2;margin:.9rem 0 .9rem}
+.sub{color:var(--dark-dim);margin-bottom:1.5rem}
+ul{list-style:none;margin-bottom:1.8rem}
+li{display:flex;gap:.7rem;align-items:flex-start;margin-bottom:.6rem;font-size:.95rem;color:var(--dark-dim);line-height:1.55}
+li::before{content:"";flex:none;width:6px;height:6px;margin-top:.55rem;background:var(--brass-d);border-radius:50%}
+form{display:flex;flex-direction:column;gap:.9rem}
+.field label{display:block;font-family:var(--sans);font-size:.66rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--dark-faint);margin-bottom:.35rem}
+.field input,.field select{
+  font:inherit;font-size:1rem;color:var(--dark);background:var(--paper-2);
+  border:1px solid var(--line-d);border-radius:2px;padding:.85rem .9rem;width:100%;outline:none;
+}
+.field input:focus,.field select:focus{border-color:var(--brass-d)}
+.field [aria-invalid="true"]{border-color:#b05757}
+button[type=submit]{
+  font-family:var(--sans);font-size:.76rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--paper);background:var(--brass-d);border:none;border-radius:2px;padding:1.05rem 1.4rem;
+  transition:background .3s ease;margin-top:.3rem;
+}
+button[type=submit]:hover{background:var(--dark)}
+.micro{font-size:.78rem;color:var(--dark-faint);font-style:italic}
+.err{display:none;color:#a04a3c;font-size:.86rem}
+.err.show{display:block}
+.ok{display:none;font-family:var(--serif-d);font-size:1.15rem;color:var(--brass-d);line-height:1.5}
+.ok.show{display:block}
+.legal{margin-top:2rem;font-size:.7rem;line-height:1.7;color:var(--dark-faint);font-style:italic}
+.lang{position:absolute;top:2.5rem;right:2.8rem;z-index:3;font-family:var(--sans);font-size:.7rem;letter-spacing:.12em}
+.lang button{background:none;border:none;color:rgba(240,233,220,.55);padding:.2rem}
+.lang button[aria-pressed="true"]{color:var(--brass-hi)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--brass-d);outline-offset:2px}
+@media (max-width:900px){
+  .wrap{grid-template-columns:1fr}
+  .visual{min-height:auto;padding:1.8rem;gap:2.5rem}
+  .visual .pitch p{font-size:1.3rem}
+  .lang{top:1.8rem;right:1.8rem}
+  .panel{padding:2.5rem 1.5rem 3.5rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <section class="visual">
+    <div class="veil"></div>
+    <nav class="lang" aria-label="Langue">
+      <button id="lFr" aria-pressed="true">FR</button><span style="color:rgba(240,233,220,.35)"> / </span><button id="lEn" aria-pressed="false">EN</button>
+    </nav>
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <rect x="2" y="2" width="60" height="60" rx="6" stroke="#b08d57" stroke-width="1.6"/>
+        <text x="32" y="41" text-anchor="middle" font-family="Georgia,serif" font-size="24" fill="#f0e9dc">CH</text>
+      </svg>
+      <b>COLLECTIVE&nbsp;HORIZON</b>
+    </a>
+    <div class="pitch">
+      <p data-i18n="pitch">La marge se fabrique à l'achat. Tout le reste n'est que de l'exécution.</p>
+    </div>
+    <div class="who">
+      <b data-i18n="who.k">La maison</b>
+      <span data-i18n="who.b">Collective Horizon est un family office de Miami dédié à l'immobilier résidentiel américain. Fondé par David Hazout Levy, HEC Paris, MSc International Finance.</span>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="inner">
+      <p class="kicker" data-i18n="kicker">Guide gratuit &middot; 12 pages</p>
+      <h1 data-i18n="h1">Comment nous analysons une maison avant de l'acheter</h1>
+      <p class="sub" data-i18n="sub">La grille de souscription que nous appliquons à chaque opération, avec les chiffres réels d'un chantier.</p>
+
+      <ul>
+        <li data-i18n="b1">Les 18 postes de coûts que la plupart des calculs oublient</li>
+        <li data-i18n="b2">Comment nous fixons le prix maximum d'achat, formule à l'appui</li>
+        <li data-i18n="b3">La lecture des comparables, et ce qui invalide une estimation</li>
+        <li data-i18n="b4">Les trois risques que nous écrivons avant chaque acquisition</li>
+      </ul>
+
+      <form id="gForm" novalidate>
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field">
+          <label for="gName" data-i18n="f.name">Nom complet</label>
+          <input id="gName" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="gEmail" data-i18n="f.email">Email</label>
+          <input id="gEmail" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="gProfile" data-i18n="f.profile">Votre profil</label>
+          <select id="gProfile">
+            <option value="accredited" data-i18n="f.p1">Investisseur accrédité</option>
+            <option value="exploring" data-i18n="f.p2">Je découvre le sujet</option>
+            <option value="operator" data-i18n="f.p3">Professionnel de l'immobilier</option>
+          </select>
+        </div>
+        <p class="err" id="gErr" role="alert" data-i18n="f.err">Merci de compléter les champs signalés.</p>
+        <button type="submit" id="gSubmit" data-i18n="f.cta">Recevoir le guide</button>
+        <p class="ok" id="gOk" role="status" data-i18n="f.ok">Merci. Le guide part dans votre boîte email.</p>
+        <p class="micro" data-i18n="f.micro">Un email par mois au maximum. Désabonnement en un clic. Aucune donnée financière demandée.</p>
+      </form>
+
+      <p class="legal" data-i18n="legal">Ce guide est un document pédagogique. Il ne constitue ni une offre de vente ni une sollicitation d'achat de titres financiers, ni un conseil en investissement, juridique ou fiscal. Les opportunités de co-investissement sont réservées aux investisseurs accrédités, au travers de documents d'offre définitifs. Tout investissement comporte des risques, y compris la perte du capital.</p>
+    </div>
+  </section>
+
+</div>
+
+<script>
+"use strict";
+var LEAD_EMAIL = "davidhazout@gmail.com";
+var I18N = {
+  fr: {
+    "pitch": "La marge se fabrique à l'achat. Tout le reste n'est que de l'exécution.",
+    "who.k": "La maison",
+    "who.b": "Collective Horizon est un family office de Miami dédié à l'immobilier résidentiel américain. Fondé par David Hazout Levy, HEC Paris, MSc International Finance.",
+    "kicker": "Guide gratuit · 12 pages",
+    "h1": "Comment nous analysons une maison avant de l'acheter",
+    "sub": "La grille de souscription que nous appliquons à chaque opération, avec les chiffres réels d'un chantier.",
+    "b1": "Les 18 postes de coûts que la plupart des calculs oublient",
+    "b2": "Comment nous fixons le prix maximum d'achat, formule à l'appui",
+    "b3": "La lecture des comparables, et ce qui invalide une estimation",
+    "b4": "Les trois risques que nous écrivons avant chaque acquisition",
+    "f.name": "Nom complet",
+    "f.email": "Email",
+    "f.profile": "Votre profil",
+    "f.p1": "Investisseur accrédité",
+    "f.p2": "Je découvre le sujet",
+    "f.p3": "Professionnel de l'immobilier",
+    "f.err": "Merci de compléter les champs signalés.",
+    "f.cta": "Recevoir le guide",
+    "f.ok": "Merci. Le guide part dans votre boîte email.",
+    "f.micro": "Un email par mois au maximum. Désabonnement en un clic. Aucune donnée financière demandée.",
+    "legal": "Ce guide est un document pédagogique. Il ne constitue ni une offre de vente ni une sollicitation d'achat de titres financiers, ni un conseil en investissement, juridique ou fiscal. Les opportunités de co-investissement sont réservées aux investisseurs accrédités, au travers de documents d'offre définitifs. Tout investissement comporte des risques, y compris la perte du capital.",
+    "title": "Le guide de souscription. Collective Horizon."
+  },
+  en: {
+    "pitch": "The margin is made at purchase. Everything else is execution.",
+    "who.k": "The firm",
+    "who.b": "Collective Horizon is a Miami family office dedicated to American residential real assets. Founded by David Hazout Levy, HEC Paris, MSc International Finance.",
+    "kicker": "Free guide · 12 pages",
+    "h1": "How we underwrite a house before we buy it",
+    "sub": "The underwriting grid we apply to every acquisition, with the real numbers of one project.",
+    "b1": "The 18 cost lines most calculations leave out",
+    "b2": "How we set the maximum purchase price, formula included",
+    "b3": "Reading comparables, and what invalidates a valuation",
+    "b4": "The three risks we write down before every acquisition",
+    "f.name": "Full name",
+    "f.email": "Email",
+    "f.profile": "Your profile",
+    "f.p1": "Accredited investor",
+    "f.p2": "Exploring the subject",
+    "f.p3": "Real estate professional",
+    "f.err": "Please complete the highlighted fields.",
+    "f.cta": "Send me the guide",
+    "f.ok": "Thank you. The guide is on its way to your inbox.",
+    "f.micro": "One email per month at most. Unsubscribe in one click. No financial details requested.",
+    "legal": "This guide is an educational document. It is neither an offer to sell nor a solicitation of an offer to buy any security, nor investment, legal or tax advice. Co-investment opportunities are available only to accredited investors, through definitive offering documents. All investments involve risk, including loss of capital.",
+    "title": "The underwriting guide. Collective Horizon."
+  }
+};
+var params = new URLSearchParams(location.search);
+var lang = "fr";
+function apply(l){
+  lang = l;
+  document.documentElement.lang = l;
+  var d = I18N[l];
+  document.title = d["title"];
+  document.querySelectorAll("[data-i18n]").forEach(function(el){
+    var k = el.getAttribute("data-i18n");
+    if (d[k] !== undefined) el.textContent = d[k];
+  });
+  document.getElementById("lFr").setAttribute("aria-pressed", l === "fr" ? "true" : "false");
+  document.getElementById("lEn").setAttribute("aria-pressed", l === "en" ? "true" : "false");
+}
+document.getElementById("lFr").addEventListener("click", function(){ apply("fr"); });
+document.getElementById("lEn").addEventListener("click", function(){ apply("en"); });
+(function(){
+  var q = (params.get("lang") || "").toLowerCase().slice(0,2);
+  if (q === "en" || q === "fr") return apply(q);
+  apply((navigator.language || "fr").toLowerCase().indexOf("en") === 0 ? "en" : "fr");
+})();
+
+(function(){
+  var form = document.getElementById("gForm");
+  var err = document.getElementById("gErr");
+  var ok = document.getElementById("gOk");
+  var btn = document.getElementById("gSubmit");
+  function inv(el, bad){ if (bad) el.setAttribute("aria-invalid","true"); else el.removeAttribute("aria-invalid"); }
+  function done(){ ok.classList.add("show"); err.classList.remove("show"); btn.disabled = true; btn.style.opacity = ".5"; }
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var name = document.getElementById("gName");
+    var email = document.getElementById("gEmail");
+    var bad = false;
+    var okName = name.value.trim().length > 1;
+    var okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim());
+    inv(name, !okName); if (!okName) bad = true;
+    inv(email, !okEmail); if (!okEmail) bad = true;
+    if (bad) { err.classList.add("show"); return; }
+    err.classList.remove("show");
+    var payload = {
+      name: name.value.trim(),
+      email: email.value.trim(),
+      profile: document.getElementById("gProfile").value,
+      source: params.get("utm_source") || "direct",
+      language: lang,
+      _subject: "Collective Horizon: demande du guide de souscription"
+    };
+    if (window.__leadHook) { try { window.__leadHook(payload); } catch (x) {} done(); return; }
+    btn.disabled = true;
+    fetch("https://formsubmit.co/ajax/" + LEAD_EMAIL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify(payload)
+    }).then(function(r){ if (!r.ok) throw new Error("http"); return r.json(); })
+      .then(done)
+      .catch(function(){
+        btn.disabled = false;
+        var body = "Nom: " + payload.name + "\nEmail: " + payload.email + "\nProfil: " + payload.profile + "\nSource: " + payload.source;
+        var mailto = "mailto:" + LEAD_EMAIL + "?subject=" + encodeURIComponent(payload._subject) + "&body=" + encodeURIComponent(body);
+        if (window.__mailtoHook) { try { window.__mailtoHook(mailto); } catch (x) {} done(); return; }
+        location.href = mailto;
+        done();
+      });
+  });
+})();
+</script>
+</body>
+</html>
