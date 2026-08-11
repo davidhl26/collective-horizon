@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Fiche d'opération. Collective Horizon.</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#faf6ee;--ink:#1a221c;--soft:#3d463f;--brass:#8a6d3f;--line:rgba(138,109,63,.3);--rule:rgba(26,34,28,.12);--green:#4a6b52;--red:#9c5a4a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#e8e2d5;color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:14px;line-height:1.55;padding:2.5rem 1rem}
+.page{max-width:880px;margin:0 auto;background:var(--paper);padding:44px 48px;box-shadow:0 2px 40px rgba(0,0,0,.12)}
+h1{font-family:"Fraunces",Georgia,serif;font-weight:400;font-size:1.75rem;line-height:1.2}
+h2{font-family:"Fraunces",Georgia,serif;font-weight:400;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin:1.8rem 0 .8rem;display:flex;align-items:center;gap:.9rem}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+.head{display:flex;justify-content:space-between;align-items:flex-start;gap:2rem;border-bottom:1px solid var(--line);padding-bottom:1rem;margin-bottom:1.4rem}
+.head .brand{display:flex;align-items:center;gap:.75rem}
+.head svg{width:38px;height:38px}
+.head b{font-family:"Fraunces",Georgia,serif;font-weight:500;letter-spacing:.2em;font-size:.78rem}
+.head .meta{text-align:right;font-family:"Libre Franklin",sans-serif;font-size:.68rem;color:var(--soft);line-height:1.6}
+.head .meta strong{display:block;color:var(--ink);font-size:.75rem;letter-spacing:.12em}
+.title-row{display:flex;justify-content:space-between;align-items:flex-end;gap:1.5rem;flex-wrap:wrap}
+.badge{font-family:"Libre Franklin",sans-serif;font-size:.64rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.35rem .8rem;border:1px solid var(--brass);color:var(--brass);white-space:nowrap}
+.sub{font-family:"Libre Franklin",sans-serif;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin-top:.35rem}
+.photos{display:grid;grid-template-columns:2fr 1fr 1fr;gap:.5rem;margin:1.2rem 0 .4rem}
+.photos .ph{background:#e6ded0;border:1px dashed var(--line);aspect-ratio:4/3;display:grid;place-items:center;font-family:"Libre Franklin",sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);text-align:center;padding:.5rem;overflow:hidden}
+.photos .ph img{width:100%;height:100%;object-fit:cover}
+.photos .ph:first-child{grid-row:span 2;aspect-ratio:auto}
+.cap{font-size:.72rem;font-style:italic;color:var(--soft)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:.4rem .2rem;border-bottom:1px solid var(--rule);font-size:.88rem}
+th{font-family:"Libre Franklin",sans-serif;font-size:.64rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);width:58%}
+td{text-align:right;font-weight:500}
+td.big{font-family:"Fraunces",Georgia,serif;font-size:1.05rem;color:var(--brass)}
+ul{margin:.2rem 0 0 1.1rem}
+li{margin-bottom:.3rem;font-size:.88rem;color:var(--soft)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.5rem}
+.share{border:1px solid var(--line);padding:1rem 1.2rem}
+.share.them{background:rgba(138,109,63,.07)}
+.share h3{font-family:"Libre Franklin",sans-serif;font-size:.64rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);margin-bottom:.5rem}
+.share .amt{font-family:"Fraunces",Georgia,serif;font-size:1.7rem;font-weight:400;color:var(--brass);line-height:1.1}
+.share .det{font-size:.78rem;color:var(--soft);margin-top:.4rem;line-height:1.5}
+.waterfall{font-size:.82rem;color:var(--soft);margin-top:.7rem;padding:.6rem .8rem;border-inline-start:2px solid var(--brass);background:rgba(138,109,63,.05)}
+.risks{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+.risk{border:1px solid var(--rule);padding:.75rem .85rem}
+.risk b{font-family:"Libre Franklin",sans-serif;font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--red);display:block;margin-bottom:.25rem}
+.risk p{font-size:.8rem;color:var(--soft);line-height:1.5}
+.cta-box{border:1px solid var(--brass);padding:1rem 1.2rem;margin-top:1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.cta-box .l{font-family:"Fraunces",Georgia,serif;font-size:1.05rem}
+.cta-box .r{font-family:"Libre Franklin",sans-serif;font-size:.78rem;color:var(--soft);text-align:right}
+.foot{margin-top:1.6rem;border-top:1px solid var(--line);padding-top:.9rem;font-size:.7rem;font-style:italic;color:var(--soft);line-height:1.65}
+.ph-note{font-family:"Libre Franklin",sans-serif;font-size:.6rem;letter-spacing:.08em;color:var(--brass)}
+@media (max-width:720px){.cols,.split,.risks{grid-template-columns:1fr}.photos{grid-template-columns:1fr 1fr}.photos .ph:first-child{grid-row:auto;grid-column:span 2}}
+@media print{body{background:var(--paper);padding:0}.page{box-shadow:none;padding:14px 18px}@page{size:A4;margin:10mm}h2{break-after:avoid}.risks,.split,.cta-box{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="head">
+    <div class="brand">
+      <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <rect x="2" y="2" width="60" height="60" rx="6" stroke="#8a6d3f" stroke-width="1.6"/>
+        <text x="32" y="41" text-anchor="middle" font-family="Georgia,serif" font-size="24" fill="#1a221c">CH</text>
+      </svg>
+      <b>COLLECTIVE&nbsp;HORIZON</b>
+    </div>
+    <div class="meta">
+      <strong>FICHE D'OPÉRATION</strong>
+      Réf. <span class="ph-note">[CH-2026-001]</span><br>
+      <span class="ph-note">[date]</span> &middot; Privé et confidentiel
+    </div>
+  </div>
+
+  <div class="title-row">
+    <div>
+      <h1><span class="ph-note">[1234 Rue, Ville, État]</span></h1>
+      <p class="sub">Fix &amp; Flip &middot; <span class="ph-note">[marché]</span> &middot; Horizon <span class="ph-note">[6]</span> mois</p>
+    </div>
+    <span class="badge">Ouvert à souscription</span>
+  </div>
+
+  <div class="photos">
+    <div class="ph">Photo principale<br>façade</div>
+    <div class="ph">Intérieur avant</div>
+    <div class="ph">Cuisine ou salle de bain</div>
+    <div class="ph">Comparable vendu</div>
+    <div class="ph">Plan ou vue rue</div>
+  </div>
+  <p class="cap">État actuel du bien. Les photos après travaux seront publiées à chaque étape du chantier.</p>
+
+  <div class="cols">
+    <div>
+      <h2>Le bien</h2>
+      <table>
+        <tr><th>Type</th><td><span class="ph-note">[maison individuelle]</span></td></tr>
+        <tr><th>Surface / pièces</th><td><span class="ph-note">[120 m2, 3ch, 2sdb]</span></td></tr>
+        <tr><th>Année</th><td><span class="ph-note">[1978]</span></td></tr>
+        <tr><th>Terrain</th><td><span class="ph-note">[600 m2]</span></td></tr>
+        <tr><th>Comparables retenus</th><td><span class="ph-note">[3 ventes, moins de 1,5 km]</span></td></tr>
+      </table>
+
+      <h2>Les travaux</h2>
+      <ul>
+        <li><span class="ph-note">[Toiture: réfection complète]</span></li>
+        <li><span class="ph-note">[Cuisine et deux salles de bain]</span></li>
+        <li><span class="ph-note">[Sols, peinture, menuiseries]</span></li>
+        <li><span class="ph-note">[Électricité et plomberie aux normes]</span></li>
+        <li><span class="ph-note">[Extérieurs et façade]</span></li>
+      </ul>
+      <p class="cap" style="margin-top:.5rem">Devis d'entreprise signé avant acquisition. Provision pour aléas incluse.</p>
+    </div>
+
+    <div>
+      <h2>Les chiffres</h2>
+      <table>
+        <tr><th>Prix d'acquisition</th><td><span class="ph-note">[110 000 $]</span></td></tr>
+        <tr><th>Budget travaux (aléas 15% inclus)</th><td><span class="ph-note">[40 000 $]</span></td></tr>
+        <tr><th>Frais, portage et financement</th><td><span class="ph-note">[17 500 $]</span></td></tr>
+        <tr><th>Prix de revient total</th><td><span class="ph-note">[167 500 $]</span></td></tr>
+        <tr><th>Valeur après travaux (objectif)</th><td class="big"><span class="ph-note">[220 000 $]</span></td></tr>
+        <tr><th>Frais de vente estimés</th><td><span class="ph-note">[15 200 $]</span></td></tr>
+        <tr><th>Profit net (objectif)</th><td class="big"><span class="ph-note">[37 300 $]</span></td></tr>
+      </table>
+
+      <h2>Le financement</h2>
+      <table>
+        <tr><th>Prêt hard money</th><td><span class="ph-note">[120 000 $]</span></td></tr>
+        <tr><th>Capitaux propres recherchés</th><td class="big"><span class="ph-note">[50 000 $]</span></td></tr>
+        <tr><th>Ticket minimum</th><td><span class="ph-note">[25 000 $]</span></td></tr>
+        <tr><th>Places restantes</th><td><span class="ph-note">[2]</span></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <h2>Le partage, en clair</h2>
+  <div class="split">
+    <div class="share them">
+      <h3>Pour l'investisseur</h3>
+      <div class="amt"><span class="ph-note">[10 400 $]</span></div>
+      <p class="det">Objectif sur <span class="ph-note">[50 000 $]</span> engagés, horizon <span class="ph-note">[6]</span> mois.
+      Capital remboursé en priorité à la revente.</p>
+    </div>
+    <div class="share">
+      <h3>Pour Collective Horizon</h3>
+      <div class="amt"><span class="ph-note">[19 600 $]</span></div>
+      <p class="det">Rémunération de la maison, servie après le capital et le préférentiel de l'investisseur.
+      Nous publions notre propre marge sur chaque opération.</p>
+    </div>
+  </div>
+  <p class="waterfall"><b>Ordre de distribution:</b> 1. remboursement du prêt et de tous les frais, 2. retour du capital de l'investisseur,
+  3. préférentiel de 8% annualisé pour l'investisseur, 4. partage du solde <span class="ph-note">[70% maison / 30% investisseur]</span>.
+  Le partage porte sur le profit net après remboursement de la dette et de l'ensemble des frais listés ci-dessus.</p>
+
+  <h2>Les risques</h2>
+  <div class="risks">
+    <div class="risk">
+      <b>Marché</b>
+      <p>Si la valeur de revente déçoit de <span class="ph-note">[10]</span>%, le profit tombe à <span class="ph-note">[15 300 $]</span>.
+      En dessous de <span class="ph-note">[183 000 $]</span> de revente, l'opération est à perte.</p>
+    </div>
+    <div class="risk">
+      <b>Exécution</b>
+      <p>Un dépassement de travaux au-delà de la provision de 15% réduit le profit à due concurrence.
+      Réserve de trésorerie constituée: <span class="ph-note">[25 000 $]</span>.</p>
+    </div>
+    <div class="risk">
+      <b>Calendrier</b>
+      <p>Chaque mois de retard coûte environ <span class="ph-note">[1 800 $]</span> en intérêts et portage.
+      Solution de repli: mise en location et refinancement.</p>
+    </div>
+  </div>
+  <p class="cap" style="margin-top:.6rem">Tout investissement comporte des risques, y compris la perte du capital.</p>
+
+  <div class="cta-box">
+    <div class="l">Engagements clôturés le <span class="ph-note">[date]</span></div>
+    <div class="r">David Hazout Levy<br><span class="ph-note">[téléphone]</span> &middot; <span class="ph-note">[email]</span></div>
+  </div>
+
+  <p class="foot">Document privé et confidentiel, remis à un investisseur accrédité à sa demande. Ne pas diffuser.
+  Les chiffres identifiés comme objectifs sont des cibles de projet, ni des prédictions ni des engagements.
+  Les performances passées ne préjugent pas des résultats futurs. Rien dans ce document ne constitue une offre
+  de vente ni une sollicitation d'achat de titres financiers, ni un conseil en investissement, juridique ou fiscal.
+  Toute participation s'effectue exclusivement au travers de documents définitifs. Tout investissement comporte
+  des risques, y compris la perte du capital.</p>
+
+</div>
+</body>
+</html>
