@@ -46,6 +46,14 @@ li{margin-bottom:.3rem;font-size:.88rem;color:var(--soft)}
 .share .amt{font-family:"Fraunces",Georgia,serif;font-size:1.7rem;font-weight:400;color:var(--brass);line-height:1.1}
 .share .det{font-size:.78rem;color:var(--soft);margin-top:.4rem;line-height:1.5}
 .waterfall{font-size:.82rem;color:var(--soft);margin-top:.7rem;padding:.6rem .8rem;border-inline-start:2px solid var(--brass);background:rgba(138,109,63,.05)}
+table.scen th{width:auto;text-align:right;color:var(--soft)}
+table.scen th:first-child{text-align:left}
+table.scen td{text-align:right;font-size:.84rem}
+table.scen td:first-child{text-align:left;font-weight:400;color:var(--soft)}
+table.scen tr.target{background:rgba(138,109,63,.1)}
+table.scen tr.target td{color:var(--ink)}
+table.scen tr.be td{color:var(--soft)}
+table.scen tr.loss td{color:var(--red)}
 .risks{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
 .risk{border:1px solid var(--rule);padding:.75rem .85rem}
 .risk b{font-family:"Libre Franklin",sans-serif;font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--red);display:block;margin-bottom:.25rem}
@@ -160,6 +168,22 @@ li{margin-bottom:.3rem;font-size:.88rem;color:var(--soft)}
   <p class="waterfall"><b>Ordre de distribution:</b> 1. remboursement du prêt et de tous les frais, 2. retour du capital du partenaire,
   3. préférentiel de 8% annualisé pour le partenaire, 4. partage du solde <b>60% maison / 40% partenaire</b>.
   Le partage porte sur le profit net après remboursement de la dette et de l'ensemble des frais listés ci-dessus.</p>
+
+  <h2>Les scénarios</h2>
+  <table class="scen">
+    <tr><th>Prix de revente</th><th>Profit net</th><th>Partenaire</th><th>Maison</th><th>Rendement partenaire</th></tr>
+    <tr><td><span class="ph-note">[240 000 $]</span></td><td><span class="ph-note">[55 940]</span></td><td><span class="ph-note">[23 576]</span></td><td><span class="ph-note">[32 364]</span></td><td><span class="ph-note">[47,2%]</span></td></tr>
+    <tr><td><span class="ph-note">[230 000 $]</span></td><td><span class="ph-note">[46 630]</span></td><td><span class="ph-note">[19 852]</span></td><td><span class="ph-note">[26 778]</span></td><td><span class="ph-note">[39,7%]</span></td></tr>
+    <tr class="target"><td><b><span class="ph-note">[220 000 $]</span> objectif</b></td><td><b><span class="ph-note">[37 320]</span></b></td><td><b><span class="ph-note">[16 128]</span></b></td><td><b><span class="ph-note">[21 192]</span></b></td><td><b><span class="ph-note">[32,3%]</span></b></td></tr>
+    <tr><td><span class="ph-note">[210 000 $]</span></td><td><span class="ph-note">[28 010]</span></td><td><span class="ph-note">[12 404]</span></td><td><span class="ph-note">[15 606]</span></td><td><span class="ph-note">[24,8%]</span></td></tr>
+    <tr><td><span class="ph-note">[200 000 $]</span></td><td><span class="ph-note">[18 700]</span></td><td><span class="ph-note">[8 680]</span></td><td><span class="ph-note">[10 020]</span></td><td><span class="ph-note">[17,4%]</span></td></tr>
+    <tr><td><span class="ph-note">[190 000 $]</span></td><td><span class="ph-note">[9 390]</span></td><td><span class="ph-note">[4 956]</span></td><td><span class="ph-note">[4 434]</span></td><td><span class="ph-note">[9,9%]</span></td></tr>
+    <tr class="be"><td><span class="ph-note">[180 000 $]</span> point mort</td><td><span class="ph-note">[80]</span></td><td><span class="ph-note">[80]</span></td><td><span class="ph-note">[0]</span></td><td><span class="ph-note">[0,2%]</span></td></tr>
+    <tr class="loss"><td><span class="ph-note">[170 000 $]</span></td><td><span class="ph-note">[-9 230]</span></td><td><span class="ph-note">[-9 230]</span></td><td><span class="ph-note">[0]</span></td><td><span class="ph-note">[-18,5%]</span></td></tr>
+  </table>
+  <p class="cap" style="margin-top:.5rem">Rendement calculé sur <span class="ph-note">[50 000 $]</span> engagés, horizon <span class="ph-note">[6]</span> mois.
+  En dessous du point mort, la perte est supportée par les fonds propres, donc par le partenaire, la dette étant senior.
+  Objectifs de projet, ni prédictions ni engagements.</p>
 
   <h2>Les risques</h2>
   <div class="risks">
