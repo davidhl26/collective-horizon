@@ -86,7 +86,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
   <section class="visual">
     <div class="veil"></div>
     <nav class="lang" aria-label="Langue">
-      <button id="lFr" aria-pressed="true">FR</button><span style="color:rgba(240,233,220,.35)"> / </span><button id="lEn" aria-pressed="false">EN</button>
+      <button id="lFr" aria-pressed="true">FR</button><span style="color:rgba(240,233,220,.35)"> / </span><button id="lEn" aria-pressed="false">EN</button><span style="color:rgba(240,233,220,.35)"> / </span><button id="lEs" aria-pressed="false">ES</button>
     </nav>
     <a class="brand" href="index.html">
       <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
@@ -198,6 +198,30 @@ var I18N = {
     "f.micro": "One email per month at most. Unsubscribe in one click. No financial details requested.",
     "legal": "This guide is an educational document. It is neither an offer to sell nor a solicitation of an offer to buy any security, nor investment, legal or tax advice. Co-investment opportunities are available only to accredited investors, through definitive offering documents. All investments involve risk, including loss of capital.",
     "title": "The underwriting guide. Collective Horizon."
+  },
+  es: {
+    "pitch": "El margen se hace en la compra. Todo lo demás es ejecución.",
+    "who.k": "La casa",
+    "who.b": "Collective Horizon es un family office de Miami dedicado a los activos residenciales americanos. Fundado por David Hazout Levy, HEC Paris, MSc International Finance.",
+    "kicker": "Guía gratuita · 12 páginas",
+    "h1": "Cómo analizamos una casa antes de comprarla",
+    "sub": "La matriz de análisis que aplicamos a cada adquisición, con las cifras reales de una obra.",
+    "b1": "Las 18 líneas de costos que la mayoría de los cálculos omite",
+    "b2": "Cómo fijamos el precio máximo de compra, con la fórmula incluida",
+    "b3": "La lectura de comparables, y qué invalida una valoración",
+    "b4": "Los tres riesgos que escribimos antes de cada adquisición",
+    "f.name": "Nombre completo",
+    "f.email": "Email",
+    "f.profile": "Su perfil",
+    "f.p1": "Inversionista acreditado",
+    "f.p2": "Estoy explorando el tema",
+    "f.p3": "Profesional inmobiliario",
+    "f.err": "Por favor complete los campos señalados.",
+    "f.cta": "Recibir la guía",
+    "f.ok": "Gracias. La guía va en camino a su correo.",
+    "f.micro": "Un correo al mes como máximo. Baja en un clic. No pedimos ningún dato financiero.",
+    "legal": "Esta guía es un documento pedagógico. No constituye una oferta de venta ni una solicitud de compra de valores, ni asesoría de inversión, legal o fiscal. Las oportunidades de coinversión están reservadas a inversionistas acreditados, mediante documentos de oferta definitivos. Toda inversión implica riesgos, incluida la pérdida del capital.",
+    "title": "La guía de análisis. Collective Horizon."
   }
 };
 var params = new URLSearchParams(location.search);
@@ -211,15 +235,21 @@ function apply(l){
     var k = el.getAttribute("data-i18n");
     if (d[k] !== undefined) el.textContent = d[k];
   });
-  document.getElementById("lFr").setAttribute("aria-pressed", l === "fr" ? "true" : "false");
-  document.getElementById("lEn").setAttribute("aria-pressed", l === "en" ? "true" : "false");
+  [["fr","lFr"],["en","lEn"],["es","lEs"]].forEach(function(pair){
+    var b = document.getElementById(pair[1]);
+    if (b) b.setAttribute("aria-pressed", l === pair[0] ? "true" : "false");
+  });
 }
-document.getElementById("lFr").addEventListener("click", function(){ apply("fr"); });
-document.getElementById("lEn").addEventListener("click", function(){ apply("en"); });
+[["fr","lFr"],["en","lEn"],["es","lEs"]].forEach(function(pair){
+  var b = document.getElementById(pair[1]);
+  if (b) b.addEventListener("click", function(){ apply(pair[0]); });
+});
 (function(){
+  var ok = ["fr","en","es"];
   var q = (params.get("lang") || "").toLowerCase().slice(0,2);
-  if (q === "en" || q === "fr") return apply(q);
-  apply((navigator.language || "fr").toLowerCase().indexOf("en") === 0 ? "en" : "fr");
+  if (ok.indexOf(q) >= 0) return apply(q);
+  var nav = (navigator.language || "fr").toLowerCase().slice(0,2);
+  apply(ok.indexOf(nav) >= 0 ? nav : "fr");
 })();
 
 (function(){
