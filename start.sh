@@ -13,9 +13,8 @@ if [ ! -f index.html ]; then
   exit 1
 fi
 
-FRAMES=$(ls assets/frames/*.webp 2>/dev/null | wc -l | tr -d ' ')
-if [ "$FRAMES" -lt 100 ]; then
-  echo "Attention: seulement $FRAMES frames dans assets/frames. Le hero sera fige." >&2
+if [ ! -f assets/hero-still.webp ] || [ ! -f src/app.js ]; then
+  echo "Attention: assets/hero-still.webp ou src/app.js manquant. Le site sera incomplet." >&2
 fi
 
 URL="http://localhost:$PORT/index.html"
