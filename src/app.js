@@ -78,6 +78,7 @@
       "val.m1": "18 à 22%",
       "val.m2": "17 à 22%",
       "val.rentpm": "2 300 $ par mois, cible",
+      "val.ticket": "À partir de 10 000 $",
 
       "house1.name": "Dossier A. Maison individuelle, 3 chambres, 2 bains",
       "house1.city": "Rue calme, quartier établi",
@@ -124,7 +125,7 @@
       "q1": "Qui peut participer?",
       "a1": "Les investisseurs accrédités ou autrement qualifiés, agissant de leur propre initiative. La qualification est vérifiée avant qu'un dossier n'aille plus loin.",
       "q2": "Quel est le ticket minimum?",
-      "a2": "Il est fixé dossier par dossier. Les dossiers types de cette page utilisent 50 000 $ comme point de repère.",
+      "a2": "Les tickets commencent à 10 000 $. Le minimum est fixé dossier par dossier, selon la taille du projet.",
       "q3": "Où va mon argent?",
       "a3": "Dans la société dédiée du projet, sur son propre compte bancaire. Une maison par société, jamais mélangé.",
       "q4": "Qu'est-ce que je signe?",
@@ -238,6 +239,7 @@
       "val.m1": "18 a 22%",
       "val.m2": "17 a 22%",
       "val.rentpm": "2 300 $ al mes, objetivo",
+      "val.ticket": "Desde 10 000 $",
 
       "house1.name": "Expediente A. Casa unifamiliar, 3 habitaciones, 2 baños",
       "house1.city": "Calle tranquila, barrio consolidado",
@@ -284,7 +286,7 @@
       "q1": "¿Quién puede participar?",
       "a1": "Inversionistas acreditados o de otro modo calificados, actuando por iniciativa propia. La calificación se verifica antes de que un expediente avance.",
       "q2": "¿Cuál es el ticket mínimo?",
-      "a2": "Se fija expediente por expediente. Los expedientes tipo de esta página usan 50 000 $ como referencia.",
+      "a2": "Los tickets comienzan en 10 000 $. El mínimo se fija expediente por expediente, según el tamaño del proyecto.",
       "q3": "¿Dónde queda mi dinero?",
       "a3": "En la sociedad dedicada del proyecto, en su propia cuenta bancaria. Una casa por sociedad, nunca mezclado.",
       "q4": "¿Qué firmo?",
