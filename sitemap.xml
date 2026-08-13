@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://collectivehorizon.com/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://collectivehorizon.com/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://collectivehorizon.com/?lang=fr"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://collectivehorizon.com/?lang=es"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://collectivehorizon.com/"/>
+    <loc>https://collectivehorizon.capital/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://collectivehorizon.capital/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://collectivehorizon.capital/?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://collectivehorizon.capital/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://collectivehorizon.capital/"/>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://collectivehorizon.com/privacy.html</loc>
+    <loc>https://collectivehorizon.capital/privacy.html</loc>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://collectivehorizon.com/terms.html</loc>
+    <loc>https://collectivehorizon.capital/terms.html</loc>
     <priority>0.3</priority>
   </url>
 </urlset>
