@@ -117,8 +117,9 @@ body.scrolled .site-header{
 .scroll-hint i{display:block;width:1px;height:44px;background:linear-gradient(var(--brass),transparent);animation:drip 2.2s ease infinite}
 @keyframes drip{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
-/* Sections rhythm */
+/* Sections rhythm. content-visibility defers rendering below the fold. */
 .section{padding-block:clamp(4.5rem,10vh,8rem)}
+.section,.trust,.final{content-visibility:auto;contain-intrinsic-size:auto 720px}
 .section-head{max-width:56rem;margin-bottom:clamp(2.2rem,5vh,3.6rem)}
 
 /* Steps */

@@ -22,10 +22,10 @@
 <meta property="og:locale:alternate" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0e1411">
-<link rel="preload" as="image" href="assets/hero-still.webp">
+<link rel="preload" as="image" href="assets/hero-still.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="src/styles.css">
 <script type="application/ld+json">
 {
@@ -36,6 +36,18 @@
   "logo": "https://collectivehorizon.capital/assets/favicon.svg",
   "founder": { "@type": "Person", "name": "David Hazout Levy" },
   "address": { "@type": "PostalAddress", "addressLocality": "Miami", "addressRegion": "FL", "addressCountry": "US" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Who can take part?", "acceptedAnswer": {"@type": "Answer", "text": "Accredited or otherwise qualified investors, acting at their own initiative. Qualification is verified before any file goes further."}},
+    {"@type": "Question", "name": "What is the minimum ticket?", "acceptedAnswer": {"@type": "Answer", "text": "Tickets start at $10,000. The minimum is set file by file, with the size of the project."}},
+    {"@type": "Question", "name": "Where does my money sit?", "acceptedAnswer": {"@type": "Answer", "text": "In the dedicated company of the project, on its own bank account. One house per company, never mixed."}},
+    {"@type": "Question", "name": "What are the risks?", "acceptedAnswer": {"@type": "Answer", "text": "Real estate moves, works can overrun, timelines can slip, and a project can lose money. All investments involve risk, including loss of capital. Each file names its risks in writing."}}
+  ]
 }
 </script>
 </head>
@@ -167,7 +179,7 @@
 
       <article class="house reveal" role="button" tabindex="0" data-open="houseDlg1">
         <div class="photo">
-          <img src="assets/posters/street.webp" alt="Single family houses on a tree lined street at golden hour" loading="lazy">
+          <img src="assets/posters/street-card.webp" alt="Single family houses on a tree lined street at golden hour" loading="lazy" decoding="async" width="800" height="450">
           <span class="phototag" data-i18n="tag.flip">Fix and flip</span>
         </div>
         <div class="body">
@@ -188,7 +200,7 @@
 
       <article class="house reveal d1" role="button" tabindex="0" data-open="houseDlg2">
         <div class="photo">
-          <img src="assets/posters/craft.webp" alt="Freshly renovated room with restored wood floors and new windows" loading="lazy">
+          <img src="assets/posters/craft-card.webp" alt="Freshly renovated room with restored wood floors and new windows" loading="lazy" decoding="async" width="800" height="450">
           <span class="phototag" data-i18n="tag.flip">Fix and flip</span>
         </div>
         <div class="body">
@@ -209,7 +221,7 @@
 
       <article class="house reveal d2" role="button" tabindex="0" data-open="houseDlg3">
         <div class="photo">
-          <img src="assets/posters/multifamily.webp" alt="Brick duplex buildings with lit windows at dusk" loading="lazy">
+          <img src="assets/posters/multifamily-card.webp" alt="Brick duplex buildings with lit windows at dusk" loading="lazy" decoding="async" width="800" height="450">
           <span class="phototag" data-i18n="tag.rent">Rental</span>
         </div>
         <div class="body">
@@ -281,7 +293,7 @@
 </section>
 
 <section class="final" id="contact">
-  <div class="bg"><img src="assets/posters/exit.webp" alt="" loading="lazy"></div>
+  <div class="bg"><img src="assets/posters/exit.webp" alt="" loading="lazy" decoding="async" width="1600" height="900"></div>
   <div class="inner">
     <div class="wrap">
       <p class="kicker" data-i18n="form.kicker">The first step</p>
@@ -317,7 +329,7 @@
 <dialog id="houseDlg1" aria-labelledby="h1Title">
   <div class="dlg-scroll">
     <button class="dlg-close" type="button" aria-label="Close" data-i18n-aria="aria.close">&times;</button>
-    <div class="dlg-banner"><img src="assets/posters/street.webp" alt=""></div>
+    <div class="dlg-banner"><img src="assets/posters/street.webp" alt="" loading="lazy" decoding="async" width="1600" height="900"></div>
     <div class="dlg-body">
       <p class="kicker" data-i18n="tag.flip">Fix and flip</p>
       <h3 id="h1Title" data-i18n="house1.name">File A. Single family, 3 bed, 2 bath</h3>
@@ -369,7 +381,7 @@
 <dialog id="houseDlg2" aria-labelledby="h2Title">
   <div class="dlg-scroll">
     <button class="dlg-close" type="button" aria-label="Close" data-i18n-aria="aria.close">&times;</button>
-    <div class="dlg-banner"><img src="assets/posters/craft.webp" alt=""></div>
+    <div class="dlg-banner"><img src="assets/posters/craft.webp" alt="" loading="lazy" decoding="async" width="1600" height="900"></div>
     <div class="dlg-body">
       <p class="kicker" data-i18n="tag.flip">Fix and flip</p>
       <h3 id="h2Title" data-i18n="house2.name">File B. Single family, larger works</h3>
@@ -421,7 +433,7 @@
 <dialog id="houseDlg3" aria-labelledby="h3Title">
   <div class="dlg-scroll">
     <button class="dlg-close" type="button" aria-label="Close" data-i18n-aria="aria.close">&times;</button>
-    <div class="dlg-banner"><img src="assets/posters/multifamily.webp" alt=""></div>
+    <div class="dlg-banner"><img src="assets/posters/multifamily.webp" alt="" loading="lazy" decoding="async" width="1600" height="900"></div>
     <div class="dlg-body">
       <p class="kicker" data-i18n="tag.rent">Rental</p>
       <h3 id="h3Title" data-i18n="house3.name">File C. Duplex kept for rent</h3>
