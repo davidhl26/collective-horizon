@@ -111,6 +111,27 @@
       "dlg.full.li4": "La structure, l'ordre des distributions et les documents que vous signez",
       "dlg.cta": "Recevoir le dossier complet",
       "dlg.note": "Réservé aux investisseurs accrédités ou autrement qualifiés. Dossier type illustratif, pas une offre. Les performances passées ne préjugent pas des résultats futurs.",
+      
+      "pr.back": "Toutes les maisons",
+      "pr.offer.t": "L'offre, en parts",
+      "pr.offer.units": "Parts de Classe A offertes",
+      "pr.offer.price": "Prix par part",
+      "pr.offer.min": "Souscription minimum",
+      "pr.offer.total": "Levée totale, ce projet",
+      "pr.offer.note": "Les parts sont des parts sociales de la LLC dédiée au projet, réservées aux investisseurs accrédités vérifiés, et remises uniquement au travers de documents définitifs. Cette page est une information, pas une offre.",
+      "pr.waterfall.t": "Qui est payé, dans quel ordre",
+      "pr.w1": "Le prêteur senior et tous les coûts du projet",
+      "pr.w2": "Le capital des investisseurs, remboursé en totalité",
+      "pr.w3": "Une préférence de 8% annualisée pour les investisseurs",
+      "pr.w4": "Le profit restant, partagé entre gérant et investisseurs comme écrit au dossier",
+      "pr.scen.t": "Trois scénarios, écrits avant d'acheter",
+      "pr.scen.sale": "Revente",
+      "pr.scen.note": "Des objectifs, pas des promesses. Le scénario bas peut aller plus bas: tout investissement comporte des risques, y compris la perte du capital.",
+      "pr.cal.t": "Le calendrier",
+      "landis.cal": "Closing le 17 août. Travaux environ 10 semaines. Vente visée sous 6 mois.",
+      "goodman.cal": "En analyse. Travaux environ 8 semaines après le closing. Vente visée sous 6 mois.",
+      "pr.docs.t": "Ce que vous signez",
+      "pr.docs.p": "Pacte de la LLC de projet, contrat de souscription, questionnaire investisseur, vérification d'accréditation. Tous les documents sont remis et lus avant tout engagement.",
       "dlg.notereal": "Réservé aux investisseurs accrédités ou autrement qualifiés. Tous les chiffres sont des objectifs, pas des promesses. Cette page est une information, pas une offre: toute participation passe uniquement par des documents d'offre définitifs.",
 
       "method.kicker": "La méthode",
@@ -281,6 +302,27 @@
       "dlg.full.li4": "La estructura, el orden de las distribuciones y los documentos que usted firma",
       "dlg.cta": "Solicitar el expediente completo",
       "dlg.note": "Reservado a inversionistas acreditados o de otro modo calificados. Expediente tipo ilustrativo, no una oferta. El rendimiento pasado no predice los resultados futuros.",
+      
+      "pr.back": "Todas las casas",
+      "pr.offer.t": "La oferta, en participaciones",
+      "pr.offer.units": "Participaciones Clase A ofrecidas",
+      "pr.offer.price": "Precio por participación",
+      "pr.offer.min": "Suscripción mínima",
+      "pr.offer.total": "Levantamiento total, este proyecto",
+      "pr.offer.note": "Las participaciones son partes sociales de la LLC dedicada al proyecto, reservadas a inversionistas acreditados verificados, y entregadas únicamente a través de documentos definitivos. Esta página es información, no una oferta.",
+      "pr.waterfall.t": "Quién cobra, en qué orden",
+      "pr.w1": "El prestamista senior y todos los costos del proyecto",
+      "pr.w2": "El capital de los inversionistas, devuelto íntegramente",
+      "pr.w3": "Un retorno preferente del 8% anualizado para los inversionistas",
+      "pr.w4": "La utilidad restante, repartida entre gerente e inversionistas según el expediente",
+      "pr.scen.t": "Tres escenarios, escritos antes de comprar",
+      "pr.scen.sale": "Reventa",
+      "pr.scen.note": "Objetivos, no promesas. El escenario bajo puede ser peor: toda inversión implica riesgos, incluida la pérdida del capital.",
+      "pr.cal.t": "El calendario",
+      "landis.cal": "Cierre el 17 de agosto. Obras unas 10 semanas. Venta objetivo en 6 meses.",
+      "goodman.cal": "En análisis. Obras unas 8 semanas tras el cierre. Venta objetivo en 6 meses.",
+      "pr.docs.t": "Lo que usted firma",
+      "pr.docs.p": "Pacto de la LLC del proyecto, contrato de suscripción, cuestionario del inversionista, verificación de acreditación. Todos los documentos se entregan y se leen antes de cualquier compromiso.",
       "dlg.notereal": "Reservado a inversionistas acreditados o de otro modo calificados. Todas las cifras son objetivos, no promesas. Esta página es información, no una oferta: toda participación pasa únicamente por documentos de oferta definitivos.",
 
       "method.kicker": "El método",
@@ -392,8 +434,10 @@
       if (v !== undefined) el.setAttribute("aria-label", v);
     });
     document.documentElement.lang = l;
-    document.title = d._title || enDict._title;
-    if (metaDesc) metaDesc.content = d._desc || enDict._desc;
+    if (!document.body.hasAttribute("data-keep-title")) {
+      document.title = d._title || enDict._title;
+      if (metaDesc) metaDesc.content = d._desc || enDict._desc;
+    }
     ["en", "fr", "es"].forEach(function (code) {
       var b = document.getElementById("lang" + code.charAt(0).toUpperCase() + code.slice(1));
       if (b) b.setAttribute("aria-pressed", l === code ? "true" : "false");
