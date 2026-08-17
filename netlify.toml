@@ -1,7 +1,6 @@
-# Collective Horizon. Static site: no build step, publish the repo root.
-
-[build]
-  publish = "."
+# Collective Horizon. Static site: no build step, no build section.
+# Netlify rejects publish = "." (publish dir must differ from base dir),
+# so the publish directory stays unset and defaults correctly.
 
 # Media never changes without changing filename: cache hard for a year.
 [[headers]]
