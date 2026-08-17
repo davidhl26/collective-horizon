@@ -26,6 +26,7 @@
       "hero.kicker": "Un family office privé, Miami",
       "hero.h1": "Nous achetons des maisons sous leur valeur. Nous les rénovons. Nous revendons ou nous louons.",
       "hero.sub": "Collective Horizon s'associe à des investisseurs qualifiés sur des projets résidentiels dans des marchés américains à fort rendement. Une maison, une société, un dossier clair à la fois.",
+      "hero.promise": "Les travaux vont vite. Nous nous occupons de tout.",
       "hero.cta2": "Voir les trois maisons",
       "hero.scroll": "Défiler",
 
@@ -217,6 +218,7 @@
       "hero.kicker": "Un family office privado, Miami",
       "hero.h1": "Compramos casas por debajo de su valor. Las renovamos. Vendemos o alquilamos.",
       "hero.sub": "Collective Horizon se asocia con inversionistas calificados en proyectos residenciales en mercados americanos de alto rendimiento. Una casa, una sociedad, un expediente claro a la vez.",
+      "hero.promise": "La obra avanza rápido. Nos ocupamos de todo.",
       "hero.cta2": "Ver las tres casas",
       "hero.scroll": "Deslizar",
 
