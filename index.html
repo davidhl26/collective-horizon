@@ -21,7 +21,7 @@
 <meta property="og:locale:alternate" content="fr_FR">
 <meta property="og:locale:alternate" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0e1411">
+<meta name="theme-color" content="#ffffff">
 <link rel="preload" as="image" href="assets/hero-still.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,13 +78,8 @@
 </header>
 
 <section class="hero" id="hero">
-  <div class="hero-media">
-    <video autoplay muted loop playsinline preload="metadata" poster="assets/hero-still.webp" aria-hidden="true">
-      <source src="assets/clips/hero_orbit.mp4" type="video/mp4">
-    </video>
-  </div>
-  <div class="hero-content">
-    <div class="wrap">
+  <div class="wrap">
+    <div>
       <p class="kicker" data-i18n="hero.kicker">A private family office, Miami</p>
       <h1 data-i18n="hero.h1">We buy houses below their value. We renovate them. We sell or we rent.</h1>
       <p class="lead" data-i18n="hero.sub">Collective Horizon partners with qualified investors on residential projects in high yield American markets. One house, one company, one clear file at a time.</p>
@@ -93,8 +88,12 @@
         <a class="btn btn-ghost" href="#houses" data-i18n="hero.cta2">See the three houses</a>
       </div>
     </div>
+    <div class="hero-frame">
+      <video autoplay muted loop playsinline preload="metadata" poster="assets/hero-still.webp" aria-hidden="true">
+        <source src="assets/clips/hero_orbit.mp4" type="video/mp4">
+      </video>
+    </div>
   </div>
-  <div class="scroll-hint"><span data-i18n="hero.scroll">Scroll</span><i></i></div>
 </section>
 
 <section class="section" id="houses">
